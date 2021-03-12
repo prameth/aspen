@@ -1,0 +1,204 @@
+                                                                                
+
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION REPORT                      + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       MARCH 12, 2021      
+ VERSION: 37.0   Build 395                               FRIDAY      
+ INSTALLATION:                                           10:37:30 A.M.       
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE    I
+                                                                                
+
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+                               TABLE OF CONTENTS                                
+
+
+            RUN CONTROL SECTION....................................  1
+                 RUN CONTROL INFORMATION...........................  1
+
+            PHYSICAL PROPERTIES SECTION............................  2
+                 COMPONENTS........................................  2
+
+            PHYSICAL PROPERTY TABLES SECTION.......................  3
+                 PROPERTIES TABLE:   PURE-1........................  3
+
+            PROBLEM STATUS SECTION.................................  6
+                 BLOCK STATUS......................................  6
+                                                                                
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 1       
+                                                                                
+                              RUN CONTROL SECTION                               
+
+ RUN CONTROL INFORMATION                 
+ -----------------------
+
+ THIS COPY OF ASPEN PLUS LICENSED TO                                 
+
+ TYPE OF RUN: NEW 
+
+ INPUT FILE NAME: _2350vbh.inm
+
+ OUTPUT PROBLEM DATA FILE NAME: _2350vbh 
+ LOCATED IN:                    
+
+
+ PDF SIZE USED FOR INPUT TRANSLATION:
+   NUMBER OF FILE RECORDS (PSIZE) =     0
+   NUMBER OF IN-CORE RECORDS      =   256
+ PSIZE NEEDED FOR SIMULATION    =   256
+
+ CALLING PROGRAM NAME:          apmain  
+ LOCATED IN: C:\Program Files\AspenTech\Aspen Plus V11.0\Engine\\xeq
+
+ TGS ONLY RUN
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 2       
+                                                                                
+                          PHYSICAL PROPERTIES SECTION                           
+
+ COMPONENTS                              
+ ----------
+
+  ID       TYPE  ALIAS          NAME
+   BENZENE  C     C6H6           BENZENE                         
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 3       
+                                                                                
+                        PHYSICAL PROPERTY TABLES SECTION                        
+
+ PROPERTIES TABLE:   PURE-1              
+ --------------------------
+
+   SINGLE-PHASE PROPERTIES FOR THE MIXTURE:  (KMOL/HR     )
+       BENZENE   1.000     , 
+
+   VARIED VARIABLE(S):    TEMP      PRES    
+
+   PROPERTY SET(S):       $PS-PURE
+
+   PROPERTY OPTION SET:   SRK       SOAVE-REDLICH-KWONG EQUATION OF STATE       
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 4       
+                                                                                
+                        PHYSICAL PROPERTY TABLES SECTION                        
+
+ PROPERTIES TABLE:   PURE-1 (CONTINUED)              
+
+ ----------------------------------------
+ !  TEMP      !  PRES      !  V         !
+ !            !            !  LIQUID    !
+ !            !            !  BENZENE   !
+ !            !            !            !
+ !  C         !  BAR       !  CC/MOL    !
+ !            !            !            !
+ !============!============!============!
+ !     0.0    !     1.0133 !    86.2737 !
+ !     1.9608 !     1.0133 !    86.4486 !
+ !     3.9216 !     1.0133 !    86.6254 !
+ !     5.8824 !     1.0133 !    86.8042 !
+ !     7.8431 !     1.0133 !    86.9849 !
+ !------------+------------+------------!
+ !     9.8039 !     1.0133 !    87.1676 !
+ !    11.7647 !     1.0133 !    87.3523 !
+ !    13.7255 !     1.0133 !    87.5390 !
+ !    15.6863 !     1.0133 !    87.7279 !
+ !    17.6471 !     1.0133 !    87.9189 !
+ !------------+------------+------------!
+ !    19.6078 !     1.0133 !    88.1121 !
+ !    21.5686 !     1.0133 !    88.3074 !
+ !    23.5294 !     1.0133 !    88.5050 !
+ !    25.4902 !     1.0133 !    88.7049 !
+ !    27.4510 !     1.0133 !    88.9070 !
+ !------------+------------+------------!
+ !    29.4118 !     1.0133 !    89.1116 !
+ !    31.3725 !     1.0133 !    89.3185 !
+ !    33.3333 !     1.0133 !    89.5279 !
+ !    35.2941 !     1.0133 !    89.7397 !
+ !    37.2549 !     1.0133 !    89.9541 !
+ !------------+------------+------------!
+ !    39.2157 !     1.0133 !    90.1710 !
+ !    41.1765 !     1.0133 !    90.3906 !
+ !    43.1373 !     1.0133 !    90.6128 !
+ !    45.0980 !     1.0133 !    90.8377 !
+ !    47.0588 !     1.0133 !    91.0654 !
+ !------------+------------+------------!
+ !    49.0196 !     1.0133 !    91.2960 !
+ !    50.9804 !     1.0133 !    91.5294 !
+ !    52.9412 !     1.0133 !    91.7657 !
+ !    54.9020 !     1.0133 !    92.0050 !
+ !    56.8627 !     1.0133 !    92.2474 !
+ !------------+------------+------------!
+ !    58.8235 !     1.0133 !    92.4929 !
+ !    60.7843 !     1.0133 !    92.7415 !
+ !    62.7451 !     1.0133 !    92.9934 !
+ !    64.7059 !     1.0133 !    93.2486 !
+ !    66.6667 !     1.0133 !    93.5072 !
+ ----------------------------------------
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 5       
+                                                                                
+                        PHYSICAL PROPERTY TABLES SECTION                        
+
+ PROPERTIES TABLE:   PURE-1 (CONTINUED)              
+
+ ----------------------------------------
+ !  TEMP      !  PRES      !  V         !
+ !            !            !  LIQUID    !
+ !            !            !  BENZENE   !
+ !            !            !            !
+ !  C         !  BAR       !  CC/MOL    !
+ !            !            !            !
+ !============!============!============!
+ !    68.6275 !     1.0133 !    93.7692 !
+ !    70.5882 !     1.0133 !    94.0347 !
+ !    72.5490 !     1.0133 !    94.3039 !
+ !    74.5098 !     1.0133 !    94.5766 !
+ !    76.4706 !     1.0133 !    94.8532 !
+ !------------+------------+------------!
+ !    78.4314 !     1.0133 !    95.1335 !
+ !    80.3922 !     1.0133 !    95.4178 !
+ !    82.3529 !     1.0133 !    95.7061 !
+ !    84.3137 !     1.0133 !    95.9985 !
+ !    86.2745 !     1.0133 !    96.2951 !
+ !------------+------------+------------!
+ !    88.2353 !     1.0133 !    96.5960 !
+ !    90.1961 !     1.0133 !    96.9013 !
+ !    92.1569 !     1.0133 !    97.2111 !
+ !    94.1176 !     1.0133 !    97.5255 !
+ !    96.0784 !     1.0133 !    97.8447 !
+ !------------+------------+------------!
+ !    98.0392 !     1.0133 !    98.1687 !
+ !   100.0000 !     1.0133 !    98.4976 !
+ ----------------------------------------
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 6       
+                                                                                
+                             PROBLEM STATUS SECTION                             
+
+ BLOCK STATUS                            
+ ------------
+
+ ****************************************************************************
+ *                                                                          *
+ * Calculations were completed with warnings                                *
+ *                                                                          *
+ * All Property Tables were completed normally                              *
+ *                                                                          *
+ ****************************************************************************

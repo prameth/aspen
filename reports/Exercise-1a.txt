@@ -1,0 +1,985 @@
+                                                                                
+
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION REPORT                      + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       MARCH 12, 2021      
+ VERSION: 37.0   Build 395                               FRIDAY      
+ INSTALLATION:                                           8:57:38 A.M.        
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE    I
+                                                                                
+
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+                               TABLE OF CONTENTS                                
+
+
+            PROPERTY CONSTANT ESTIMATION SECTION...................  1
+                 PURE COMPONENT PARAMETERS.........................  1
+                 BINARY PARAMETERS................................. 19
+
+            PROBLEM STATUS SECTION................................. 21
+                 BLOCK STATUS...................................... 21
+                                                                                
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 1       
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS               
+ -------------------------
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  COMP-1     FORMULA:  C4H10O      
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     MOLECULAR WEIGHT          MW             74.12                  FORMULA     
+     NORMAL BOILING POINT      TB            382.66      K           JOBACK      
+     CRITICAL TEMPERATURE      TC            548.34      K           JOBACK      
+     CRITICAL PRESSURE         PC           0.44326E+07  N/SQM       JOBACK      
+     CRITICAL VOLUME           VC            0.2725      CUM/KMOL    JOBACK      
+     CRITICAL COMPRESSIBILITY  ZC            0.2649                  DEFINITION  
+       FACTOR                  
+     IDEAL GAS CP AT 300 K                  0.10971E+06  J/KMOL-K    BENSON      
+                  AT 500 K                  0.16352E+06
+                  AT 1000 K                 0.24501E+06
+     STANDARD HEAT OF          DHFORM      -0.28494E+09  J/KMOL      BENSON      
+       FORMATION               
+     STANDARD FREE ENERGY OF   DGFORM      -0.15646E+09  J/KMOL      JOBACK      
+       FORMATION               
+     VAPOR PRESSURE AT TB                   0.10131E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.17073E+07
+                    AT TC                   0.44326E+07
+     ACENTRIC FACTOR           OMEGA         0.6233                  DEFINITION  
+     HEAT OF VAP AT TB         DHVLB        0.40494E+08  J/KMOL      DEFINITION  
+     LIQUID MOL VOL AT TB      VB           0.84977E-01  CUM/KMOL    GUNN-YAMADA 
+     SOLUBILITY PARAMETER      DELTA         23908.      (J/CUM)**.5 DEFINITION  
+     UNIQUAC R PARAMETER       GMUQR         3.4535                  BONDI       
+     UNIQUAC Q PARAMETER       GMUQQ         3.0480                  BONDI       
+     PARACHOR                  PARC          203.10                  PARACHOR    
+     LIQUID  CP   AT 298.15 K               0.17451E+06  J/KMOL-K    RUZICKA     
+                  AT TB                     0.24677E+06
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 2       
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     IDEAL GAS HEAT CAPACITY   CPIG    (1)  -1877.4      K,J/KMOL-K  BENSON      
+                                       (2)   441.85    
+                                       (3) -0.24923    
+                                       (4)  0.54264E-04
+                                       (5)       0.
+                                       (6)       0.
+                                       (7)   280.00    
+                                       (8)   1100.0    
+                                       (9)   36029.    
+                                       (10)  14.399    
+                                       (11)  1.5000    
+
+     VAPOR PRESSURE            PLXANT  (1)   87.993      K,N/SQM     RIEDEL      
+                                       (2)  -8470.7    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -9.1439    
+                                       (6)  0.15786E-16
+                                       (7)   6.0000    
+                                       (8)   382.66    
+                                       (9)   548.34    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.40494E+08  K,J/KMOL    DEFINITION  
+                                       (2)   382.66    
+                                       (3)  0.42170    
+                                       (4) -0.34498    
+                                       (5)   153.06    
+
+     MOLAR VOLUME              RKTZRA       0.23273                  GUNN-YAMADA 
+
+     VAPOR VISCOSITY           MUVDIP  (1)  0.39489E-07  K,N-SEC/SQM REICHENB    
+                                       (2)  0.92179    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)       0.
+                                       (6)   280.00    
+                                       (7)   1100.0    
+
+     LIQUID VISCOSITY          MULAND  (1)  -13.543      K,N-SEC/SQM ORRICK-E    
+                                       (2)   2306.0    
+                                       (3) -0.91427E-06
+                                       (4)   382.66    
+                                       (5)   411.26    
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 3       
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+     LIQ THERM CONDUCTIVITY    KLDIP   (1)  -3.2965      K,WATT/M-K  SATO-RIEDEL 
+                                       (2)  0.32212E-01
+                                       (3) -0.11152E-03
+                                       (4)  0.16975E-06
+                                       (5) -0.97204E-10
+                                       (6)   382.66    
+                                       (7)   542.86    
+
+     LIQUID SURFACE TENSION    SIGDIP  (1)  0.89864E-01  K,N/M       BROCK-BIRD  
+                                       (2)   1.2222    
+                                       (3) -0.13832E-08
+                                       (4)  0.15515E-08
+                                       (5) -0.61784E-09
+                                       (6)   382.66    
+                                       (7)   537.37    
+
+     LIQUID HEAT CAPACITY      CPLDIP  (1)  0.18020E+06  J/KMOL-K    RUZICKA     
+                                       (2)  -700.18    
+                                       (3)   2.2844    
+                                       (4)       0.
+                                       (5)       0.
+                                       (6)   211.61    
+                                       (7)   382.66    
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 4       
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    382.66     0.4084E+08   0.4049E+08    -0.84
+                   2    400.46     0.3905E+08   0.3901E+08    -0.11
+                   3    418.26     0.3712E+08   0.3730E+08     0.49
+                   4    436.06     0.3502E+08   0.3532E+08     0.88
+                   5    453.86     0.3271E+08   0.3304E+08     0.99
+                   6    471.66     0.3015E+08   0.3037E+08     0.72
+                   7    489.46     0.2721E+08   0.2720E+08    -0.02
+                   8    507.26     0.2359E+08   0.2332E+08    -1.17
+                   9    525.06     0.1863E+08   0.1822E+08    -2.22
+                  10    542.86     0.9606E+07   0.9734E+07     1.33
+                  ---------------------------------------------------
+    
+
+     MOLAR VOLUME            
+
+          METHOD = GUNN-YAM
+                                     MOLAR VOLUME            
+                                       (CUM/KMOL    )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    382.66     0.8599E-01   0.8498E-01    -1.18
+                   2    400.46     0.8871E-01   0.8784E-01    -0.99
+                   3    418.26     0.9175E-01   0.9106E-01    -0.74
+                   4    436.06     0.9515E-01   0.9476E-01    -0.41
+                   5    453.86     0.9953E-01   0.9908E-01    -0.45
+                   6    471.66     0.1047       0.1043        -0.40
+                   7    489.46     0.1107       0.1108         0.05
+                   8    507.26     0.1185       0.1194         0.82
+                   9    525.06     0.1303       0.1325         1.75
+                  10    542.86     0.1578       0.1619         2.61
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 5       
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     VAPOR VISCOSITY         
+
+          METHOD = REICHENB
+                                     VAPOR VISCOSITY         
+                                       (N-SEC/SQM   )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    280.00     0.6961E-05   0.7116E-05     2.23
+                   2    371.11     0.9207E-05   0.9226E-05     0.21
+                   3    462.22     0.1140E-04   0.1130E-04    -0.95
+                   4    553.33     0.1353E-04   0.1333E-04    -1.49
+                   5    644.44     0.1558E-04   0.1534E-04    -1.54
+                   6    735.56     0.1755E-04   0.1733E-04    -1.23
+                   7    826.67     0.1943E-04   0.1930E-04    -0.63
+                   8    917.78     0.2122E-04   0.2126E-04     0.17
+                   9   1008.89     0.2294E-04   0.2319E-04     1.13
+                  10   1100.00     0.2458E-04   0.2512E-04     2.20
+                  ---------------------------------------------------
+    
+
+     LIQUID VISCOSITY        
+
+          METHOD = ORRICK-E
+                                     LIQUID VISCOSITY        
+                                       (N-SEC/SQM   )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    382.66     0.5441E-03   0.5441E-03    -0.00
+                   2    385.84     0.5177E-03   0.5177E-03    -0.00
+                   3    389.01     0.4931E-03   0.4931E-03     0.00
+                   4    392.19     0.4699E-03   0.4699E-03     0.00
+                   5    395.37     0.4483E-03   0.4483E-03     0.00
+                   6    398.55     0.4279E-03   0.4279E-03     0.00
+                   7    401.72     0.4088E-03   0.4088E-03     0.00
+                   8    404.90     0.3907E-03   0.3907E-03     0.00
+                   9    408.08     0.3738E-03   0.3738E-03    -0.00
+                  10    411.26     0.3578E-03   0.3578E-03    -0.00
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 6       
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     LIQ THERM CONDUCTIVITY  
+
+          METHOD = SATO-RIE
+                                     LIQ THERM CONDUCTIVITY  
+                                       (WATT/M-K    )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    382.66     0.1284       0.1283        -0.07
+                   2    400.46     0.1214       0.1215         0.15
+                   3    418.26     0.1140       0.1141         0.03
+                   4    436.06     0.1064       0.1062        -0.14
+                   5    453.86     0.9831E-01   0.9816E-01    -0.15
+                   6    471.66     0.8970E-01   0.8974E-01     0.04
+                   7    489.46     0.8040E-01   0.8062E-01     0.27
+                   8    507.26     0.7009E-01   0.7023E-01     0.19
+                   9    525.06     0.5811E-01   0.5775E-01    -0.62
+                  10    542.86     0.4201E-01   0.4214E-01     0.32
+                  ---------------------------------------------------
+    
+
+     LIQUID SURFACE TENSION  
+
+          METHOD = BROCK-BI
+                                     LIQUID SURFACE TENSION  
+                                       (N/M         )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    382.66     0.2081E-01   0.2081E-01    -0.00
+                   2    399.85     0.1820E-01   0.1820E-01     0.00
+                   3    417.04     0.1566E-01   0.1566E-01     0.00
+                   4    434.23     0.1319E-01   0.1319E-01     0.00
+                   5    451.42     0.1081E-01   0.1081E-01    -0.00
+                   6    468.61     0.8512E-02   0.8512E-02    -0.00
+                   7    485.80     0.6326E-02   0.6326E-02    -0.00
+                   8    502.99     0.4271E-02   0.4271E-02    -0.00
+                   9    520.18     0.2385E-02   0.2385E-02     0.00
+                  10    537.37     0.7535E-03   0.7535E-03    -0.00
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 7       
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  COMP-2     FORMULA:  C6H14O3     
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     MOLECULAR WEIGHT          MW            134.18                  FORMULA     
+     NORMAL BOILING POINT      TB            473.70      K           JOBACK      
+     CRITICAL TEMPERATURE      TC            635.03      K           JOBACK      
+     CRITICAL PRESSURE         PC           0.33182E+07  N/SQM       JOBACK      
+     CRITICAL VOLUME           VC            0.4265      CUM/KMOL    JOBACK      
+     CRITICAL COMPRESSIBILITY  ZC            0.2680                  DEFINITION  
+       FACTOR                  
+     IDEAL GAS CP AT 300 K                  0.17750E+06  J/KMOL-K    BENSON      
+                  AT 500 K                  0.26429E+06
+                  AT 1000 K                 0.38629E+06
+     STANDARD HEAT OF          DHFORM      -0.56470E+09  J/KMOL      BENSON      
+       FORMATION               
+     STANDARD FREE ENERGY OF   DGFORM      -0.34718E+09  J/KMOL      JOBACK      
+       FORMATION               
+     VAPOR PRESSURE AT TB                   0.10132E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.10803E+07
+                    AT TC                   0.33182E+07
+     ACENTRIC FACTOR           OMEGA         0.9283                  DEFINITION  
+     HEAT OF VAP AT TB         DHVLB        0.54343E+08  J/KMOL      DEFINITION  
+     LIQUID MOL VOL AT TB      VB           0.11079      CUM/KMOL    GUNN-YAMADA 
+     SOLUBILITY PARAMETER      DELTA         25491.      (J/CUM)**.5 DEFINITION  
+     UNIQUAC R PARAMETER       GMUQR         5.2907                  BONDI       
+     UNIQUAC Q PARAMETER       GMUQQ         4.6120                  BONDI       
+     PARACHOR                  PARC          325.30                  PARACHOR    
+     LIQUID  CP   AT 298.15 K               0.29200E+06  J/KMOL-K    RUZICKA     
+                  AT TB                     0.45028E+06
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 8       
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     IDEAL GAS HEAT CAPACITY   CPIG    (1)  -19912.      K,J/KMOL-K  BENSON      
+                                       (2)   819.05    
+                                       (3) -0.58971    
+                                       (4)  0.17686E-03
+                                       (5)       0.
+                                       (6)       0.
+                                       (7)   280.00    
+                                       (8)   1100.0    
+                                       (9)   36029.    
+                                       (10)  27.969    
+                                       (11)  1.5000    
+
+     VAPOR PRESSURE            PLXANT  (1)   118.64      K,N/SQM     RIEDEL      
+                                       (2)  -12764.    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -13.029    
+                                       (6)  0.85135E-17
+                                       (7)   6.0000    
+                                       (8)   473.70    
+                                       (9)   635.03    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.54343E+08  K,J/KMOL    DEFINITION  
+                                       (2)   473.70    
+                                       (3)  0.40716    
+                                       (4) -0.58073    
+                                       (5)   189.48    
+
+     MOLAR VOLUME              RKTZRA       0.20397                  GUNN-YAMADA 
+
+     VAPOR VISCOSITY           MUVDIP  (1)  0.29112E-07  K,N-SEC/SQM REICHENB    
+                                       (2)  0.94357    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)       0.
+                                       (6)   280.00    
+                                       (7)   1100.0    
+
+     LIQUID VISCOSITY          MULAND  (1)  -13.614      K,N-SEC/SQM ORRICK-E    
+                                       (2)   2754.6    
+                                       (3)  0.11765E-01
+                                       (4)   473.70    
+                                       (5)   476.28    
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 9       
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+     LIQ THERM CONDUCTIVITY    KLDIP   (1)  -5.3271      K,WATT/M-K  SATO-RIEDEL 
+                                       (2)  0.41876E-01
+                                       (3) -0.11999E-03
+                                       (4)  0.15198E-06
+                                       (5) -0.72354E-10
+                                       (6)   473.70    
+                                       (7)   628.68    
+
+     LIQUID SURFACE TENSION    SIGDIP  (1)  0.93765E-01  K,N/M       BROCK-BIRD  
+                                       (2)   1.2222    
+                                       (3)  0.22478E-08
+                                       (4) -0.25286E-08
+                                       (5)  0.99273E-09
+                                       (6)   473.70    
+                                       (7)   622.33    
+
+     LIQUID HEAT CAPACITY      CPLDIP  (1)  0.28400E+06  J/KMOL-K    RUZICKA     
+                                       (2)  -523.82    
+                                       (3)   1.8468    
+                                       (4)       0.
+                                       (5)       0.
+                                       (6)   261.96    
+                                       (7)   473.70    
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 10      
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    473.70     0.5494E+08   0.5434E+08    -1.09
+                   2    490.92     0.5272E+08   0.5268E+08    -0.08
+                   3    508.14     0.5034E+08   0.5067E+08     0.67
+                   4    525.36     0.4775E+08   0.4827E+08     1.09
+                   5    542.58     0.4491E+08   0.4541E+08     1.12
+                   6    559.80     0.4169E+08   0.4198E+08     0.71
+                   7    577.02     0.3789E+08   0.3783E+08    -0.16
+                   8    594.24     0.3313E+08   0.3268E+08    -1.37
+                   9    611.46     0.2650E+08   0.2588E+08    -2.31
+                  10    628.68     0.1461E+08   0.1483E+08     1.51
+                  ---------------------------------------------------
+    
+
+     MOLAR VOLUME            
+
+          METHOD = GUNN-YAM
+                                     MOLAR VOLUME            
+                                       (CUM/KMOL    )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    473.70     0.1131       0.1108        -2.06
+                   2    490.92     0.1167       0.1146        -1.74
+                   3    508.14     0.1203       0.1190        -1.12
+                   4    525.36     0.1256       0.1240        -1.29
+                   5    542.58     0.1312       0.1298        -1.09
+                   6    559.80     0.1375       0.1368        -0.56
+                   7    577.02     0.1450       0.1455         0.30
+                   8    594.24     0.1548       0.1571         1.46
+                   9    611.46     0.1696       0.1745         2.93
+                  10    628.68     0.2015       0.2119         5.12
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 11      
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     VAPOR VISCOSITY         
+
+          METHOD = REICHENB
+                                     VAPOR VISCOSITY         
+                                       (N-SEC/SQM   )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    280.00     0.5827E-05   0.5931E-05     1.79
+                   2    371.11     0.7721E-05   0.7737E-05     0.21
+                   3    462.22     0.9589E-05   0.9518E-05    -0.74
+                   4    553.33     0.1142E-04   0.1128E-04    -1.20
+                   5    644.44     0.1319E-04   0.1302E-04    -1.28
+                   6    735.56     0.1491E-04   0.1475E-04    -1.06
+                   7    826.67     0.1657E-04   0.1647E-04    -0.58
+                   8    917.78     0.1816E-04   0.1818E-04     0.10
+                   9   1008.89     0.1970E-04   0.1988E-04     0.93
+                  10   1100.00     0.2117E-04   0.2157E-04     1.89
+                  ---------------------------------------------------
+    
+
+     LIQUID VISCOSITY        
+
+          METHOD = ORRICK-E
+                                     LIQUID VISCOSITY        
+                                       (N-SEC/SQM   )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    473.70     0.4409E-03   0.4409E-03     0.00
+                   2    473.99     0.4394E-03   0.4394E-03     0.00
+                   3    474.27     0.4378E-03   0.4378E-03    -0.00
+                   4    474.56     0.4363E-03   0.4363E-03    -0.00
+                   5    474.84     0.4348E-03   0.4348E-03    -0.00
+                   6    475.13     0.4333E-03   0.4333E-03    -0.00
+                   7    475.42     0.4318E-03   0.4318E-03    -0.00
+                   8    475.70     0.4303E-03   0.4303E-03    -0.00
+                   9    475.99     0.4288E-03   0.4288E-03     0.00
+                  10    476.28     0.4273E-03   0.4273E-03     0.00
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 12      
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     LIQ THERM CONDUCTIVITY  
+
+          METHOD = SATO-RIE
+                                     LIQ THERM CONDUCTIVITY  
+                                       (WATT/M-K    )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    473.70     0.9542E-01   0.9537E-01    -0.06
+                   2    490.92     0.9039E-01   0.9051E-01     0.13
+                   3    508.14     0.8515E-01   0.8517E-01     0.02
+                   4    525.36     0.7967E-01   0.7957E-01    -0.12
+                   5    542.58     0.7389E-01   0.7379E-01    -0.12
+                   6    559.80     0.6773E-01   0.6776E-01     0.03
+                   7    577.02     0.6109E-01   0.6123E-01     0.23
+                   8    594.24     0.5374E-01   0.5382E-01     0.16
+                   9    611.46     0.4524E-01   0.4501E-01    -0.50
+                  10    628.68     0.3401E-01   0.3409E-01     0.25
+                  ---------------------------------------------------
+    
+
+     LIQUID SURFACE TENSION  
+
+          METHOD = BROCK-BI
+                                     LIQUID SURFACE TENSION  
+                                       (N/M         )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    473.70     0.1757E-01   0.1757E-01     0.00
+                   2    490.21     0.1540E-01   0.1540E-01    -0.00
+                   3    506.73     0.1328E-01   0.1328E-01    -0.00
+                   4    523.24     0.1122E-01   0.1122E-01    -0.00
+                   5    539.76     0.9229E-02   0.9229E-02     0.00
+                   6    556.27     0.7313E-02   0.7313E-02     0.00
+                   7    572.79     0.5485E-02   0.5485E-02     0.00
+                   8    589.30     0.3763E-02   0.3763E-02    -0.00
+                   9    605.82     0.2176E-02   0.2176E-02    -0.00
+                  10    622.33     0.7862E-03   0.7862E-03     0.00
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 13      
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  COMP-3     FORMULA:  C4H10O      
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     MOLECULAR WEIGHT          MW             74.12                  FORMULA     
+     NORMAL BOILING POINT      TB            312.90      K           JOBACK      
+     CRITICAL TEMPERATURE      TC            480.53      K           JOBACK      
+     CRITICAL PRESSURE         PC           0.38531E+07  N/SQM       JOBACK      
+     CRITICAL VOLUME           VC            0.2715      CUM/KMOL    JOBACK      
+     CRITICAL COMPRESSIBILITY  ZC            0.2618                  DEFINITION  
+       FACTOR                  
+     IDEAL GAS CP AT 300 K                  0.11219E+06  J/KMOL-K    BENSON      
+                  AT 500 K                  0.16702E+06
+                  AT 1000 K                 0.24838E+06
+     STANDARD HEAT OF          DHFORM      -0.25396E+09  J/KMOL      BENSON      
+       FORMATION               
+     STANDARD FREE ENERGY OF   DGFORM      -0.12464E+09  J/KMOL      JOBACK      
+       FORMATION               
+     VAPOR PRESSURE AT TB                   0.10131E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.18084E+07
+                    AT TC                   0.38531E+07
+     ACENTRIC FACTOR           OMEGA         0.2546                  DEFINITION  
+     HEAT OF VAP AT TB         DHVLB        0.26785E+08  J/KMOL      DEFINITION  
+     LIQUID MOL VOL AT TB      VB           0.10454      CUM/KMOL    GUNN-YAMADA 
+     SOLUBILITY PARAMETER      DELTA         15700.      (J/CUM)**.5 DEFINITION  
+     UNIQUAC R PARAMETER       GMUQR         3.3942                  BONDI       
+     UNIQUAC Q PARAMETER       GMUQQ         3.0120                  BONDI       
+     PARACHOR                  PARC          208.80                  PARACHOR    
+     LIQUID  CP   AT 298.15 K               0.16149E+06  J/KMOL-K    RUZICKA     
+                  AT TB                     0.16589E+06
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 14      
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     IDEAL GAS HEAT CAPACITY   CPIG    (1)  -6836.5      K,J/KMOL-K  BENSON      
+                                       (2)   483.19    
+                                       (3) -0.31398    
+                                       (4)  0.85999E-04
+                                       (5)       0.
+                                       (6)       0.
+                                       (7)   280.00    
+                                       (8)   1100.0    
+                                       (9)   36029.    
+                                       (10)  14.876    
+                                       (11)  1.5000    
+
+     VAPOR PRESSURE            PLXANT  (1)   53.114      K,N/SQM     RIEDEL      
+                                       (2)  -4794.4    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -4.5750    
+                                       (6)  0.22511E-16
+                                       (7)   6.0000    
+                                       (8)   312.90    
+                                       (9)   480.53    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.26785E+08  K,J/KMOL    DEFINITION  
+                                       (2)   312.90    
+                                       (3)  0.43977    
+                                       (4) -0.17530    
+                                       (5)   125.16    
+
+     MOLAR VOLUME              RKTZRA       0.26753                  GUNN-YAMADA 
+
+     VAPOR VISCOSITY           MUVDIP  (1)  0.47403E-07  K,N-SEC/SQM REICHENB    
+                                       (2)  0.89927    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)       0.
+                                       (6)   280.00    
+                                       (7)   1100.0    
+
+     LIQUID VISCOSITY          MULAND  (1)  -11.084      K,N-SEC/SQM ORRICK-E    
+                                       (2)   811.00    
+                                       (3)  0.12073E-07
+                                       (4)   312.90    
+                                       (5)   360.40    
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 15      
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+     LIQ THERM CONDUCTIVITY    KLDIP   (1)  -1.6209      K,WATT/M-K  SATO-RIEDEL 
+                                       (2)  0.19868E-01
+                                       (3) -0.82121E-04
+                                       (4)  0.14806E-06
+                                       (5) -0.10051E-09
+                                       (6)   312.90    
+                                       (7)   475.72    
+
+     LIQUID SURFACE TENSION    SIGDIP  (1)  0.57824E-01  K,N/M       BROCK-BIRD  
+                                       (2)   1.2222    
+                                       (3)  0.77043E-09
+                                       (4) -0.85783E-09
+                                       (5)  0.34473E-09
+                                       (6)   312.90    
+                                       (7)   470.92    
+
+     LIQUID HEAT CAPACITY      CPLDIP  (1)  0.14596E+06  J/KMOL-K    RUZICKA     
+                                       (2)  -182.70    
+                                       (3)  0.78751    
+                                       (4)       0.
+                                       (5)       0.
+                                       (6)   173.03    
+                                       (7)   312.90    
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 16      
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    312.90     0.2691E+08   0.2679E+08    -0.46
+                   2    330.99     0.2567E+08   0.2563E+08    -0.15
+                   3    349.08     0.2430E+08   0.2435E+08     0.22
+                   4    367.17     0.2279E+08   0.2292E+08     0.56
+                   5    385.27     0.2115E+08   0.2131E+08     0.75
+                   6    403.36     0.1934E+08   0.1946E+08     0.65
+                   7    421.45     0.1729E+08   0.1732E+08     0.13
+                   8    439.54     0.1485E+08   0.1472E+08    -0.83
+                   9    457.63     0.1156E+08   0.1135E+08    -1.87
+                  10    475.72     0.5595E+07   0.5652E+07     1.02
+                  ---------------------------------------------------
+    
+
+     MOLAR VOLUME            
+
+          METHOD = GUNN-YAM
+                                     MOLAR VOLUME            
+                                       (CUM/KMOL    )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    312.90     0.1049       0.1045        -0.30
+                   2    330.99     0.1081       0.1079        -0.20
+                   3    349.08     0.1117       0.1116        -0.08
+                   4    367.17     0.1158       0.1159         0.08
+                   5    385.27     0.1203       0.1209         0.48
+                   6    403.36     0.1270       0.1269        -0.08
+                   7    421.45     0.1346       0.1344        -0.12
+                   8    439.54     0.1442       0.1444         0.17
+                   9    457.63     0.1589       0.1596         0.44
+                  10    475.72     0.1955       0.1948        -0.37
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 17      
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     VAPOR VISCOSITY         
+
+          METHOD = REICHENB
+                                     VAPOR VISCOSITY         
+                                       (N-SEC/SQM   )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    280.00     0.7333E-05   0.7524E-05     2.61
+                   2    371.11     0.9677E-05   0.9694E-05     0.18
+                   3    462.22     0.1195E-04   0.1181E-04    -1.16
+                   4    553.33     0.1413E-04   0.1388E-04    -1.73
+                   5    644.44     0.1620E-04   0.1592E-04    -1.74
+                   6    735.56     0.1818E-04   0.1793E-04    -1.34
+                   7    826.67     0.2005E-04   0.1992E-04    -0.65
+                   8    917.78     0.2183E-04   0.2188E-04     0.25
+                   9   1008.89     0.2353E-04   0.2383E-04     1.28
+                  10   1100.00     0.2515E-04   0.2575E-04     2.42
+                  ---------------------------------------------------
+    
+
+     LIQUID VISCOSITY        
+
+          METHOD = ORRICK-E
+                                     LIQUID VISCOSITY        
+                                       (N-SEC/SQM   )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    312.90     0.2050E-03   0.2050E-03     0.00
+                   2    318.18     0.1964E-03   0.1964E-03     0.00
+                   3    323.45     0.1884E-03   0.1884E-03    -0.00
+                   4    328.73     0.1810E-03   0.1810E-03    -0.00
+                   5    334.01     0.1740E-03   0.1740E-03    -0.00
+                   6    339.29     0.1676E-03   0.1676E-03    -0.00
+                   7    344.56     0.1616E-03   0.1616E-03    -0.00
+                   8    349.84     0.1559E-03   0.1559E-03    -0.00
+                   9    355.12     0.1506E-03   0.1506E-03     0.00
+                  10    360.40     0.1457E-03   0.1457E-03     0.00
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 18      
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     LIQ THERM CONDUCTIVITY  
+
+          METHOD = SATO-RIE
+                                     LIQ THERM CONDUCTIVITY  
+                                       (WATT/M-K    )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    312.90     0.1284       0.1283        -0.08
+                   2    330.99     0.1212       0.1214         0.17
+                   3    349.08     0.1136       0.1137         0.03
+                   4    367.17     0.1058       0.1056        -0.15
+                   5    385.27     0.9745E-01   0.9728E-01    -0.17
+                   6    403.36     0.8859E-01   0.8863E-01     0.04
+                   7    421.45     0.7900E-01   0.7925E-01     0.31
+                   8    439.54     0.6837E-01   0.6852E-01     0.23
+                   9    457.63     0.5597E-01   0.5556E-01    -0.73
+                  10    475.72     0.3906E-01   0.3922E-01     0.39
+                  ---------------------------------------------------
+    
+
+     LIQUID SURFACE TENSION  
+
+          METHOD = BROCK-BI
+                                     LIQUID SURFACE TENSION  
+                                       (N/M         )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    312.90     0.1596E-01   0.1596E-01     0.00
+                   2    330.46     0.1394E-01   0.1394E-01    -0.00
+                   3    348.02     0.1198E-01   0.1198E-01    -0.00
+                   4    365.57     0.1007E-01   0.1007E-01    -0.00
+                   5    383.13     0.8221E-02   0.8221E-02     0.00
+                   6    400.69     0.6448E-02   0.6448E-02     0.00
+                   7    418.25     0.4760E-02   0.4760E-02     0.00
+                   8    435.80     0.3175E-02   0.3175E-02     0.00
+                   9    453.36     0.1727E-02   0.1727E-02    -0.00
+                  10    470.92     0.4848E-03   0.4848E-03     0.00
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 19      
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS                       
+ -----------------
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING COMP-1  
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         COMP-1     COMP-2     WILSON/2     94.25    
+         COMP-2     COMP-1     WILSON/2    -174.9    
+
+         COMP-1     COMP-3     WILSON/2    -273.5    
+         COMP-3     COMP-1     WILSON/2     13.95    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         COMP-1     COMP-2     NRTL  /2     235.9    
+         COMP-2     COMP-1     NRTL  /2    -148.1    
+
+         COMP-1     COMP-2     NRTL  /3    0.3000    
+         COMP-2     COMP-1     NRTL  /3    0.3000    
+
+         COMP-1     COMP-3     NRTL  /2    -78.21    
+         COMP-3     COMP-1     NRTL  /2     343.8    
+
+         COMP-1     COMP-3     NRTL  /3    0.3000    
+         COMP-3     COMP-1     NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         COMP-1     COMP-2     UNIQ  /2    -16.48    
+         COMP-2     COMP-1     UNIQ  /2    -4.136    
+
+         COMP-1     COMP-3     UNIQ  /2     74.82    
+         COMP-3     COMP-1     UNIQ  /2    -170.1    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         COMP-1     COMP-2     SRKKIJ/1    0.5488E-02
+         COMP-2     COMP-1     SRKKIJ/1    0.5488E-02
+
+         COMP-1     COMP-2     SRKKIJ/2     0.000    
+         COMP-2     COMP-1     SRKKIJ/2     0.000    
+
+         COMP-1     COMP-2     SRKKIJ/3     0.000    
+         COMP-2     COMP-1     SRKKIJ/3     0.000    
+
+         COMP-1     COMP-3     SRKKIJ/1    0.3722E-02
+         COMP-3     COMP-1     SRKKIJ/1    0.3722E-02
+
+         COMP-1     COMP-3     SRKKIJ/2     0.000    
+         COMP-3     COMP-1     SRKKIJ/2     0.000    
+
+         COMP-1     COMP-3     SRKKIJ/3     0.000    
+         COMP-3     COMP-1     SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 20      
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING COMP-2  
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         COMP-2     COMP-3     WILSON/2    -400.1    
+         COMP-3     COMP-2     WILSON/2     145.0    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         COMP-2     COMP-3     NRTL  /2    -226.3    
+         COMP-3     COMP-2     NRTL  /2     497.6    
+
+         COMP-2     COMP-3     NRTL  /3    0.3000    
+         COMP-3     COMP-2     NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         COMP-2     COMP-3     UNIQ  /2     88.73    
+         COMP-3     COMP-2     UNIQ  /2    -156.8    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         COMP-2     COMP-3     SRKKIJ/1   -0.2029E-01
+         COMP-3     COMP-2     SRKKIJ/1   -0.2029E-01
+
+         COMP-2     COMP-3     SRKKIJ/2     0.000    
+         COMP-3     COMP-2     SRKKIJ/2     0.000    
+
+         COMP-2     COMP-3     SRKKIJ/3     0.000    
+         COMP-3     COMP-2     SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/12/2021  PAGE 21      
+                                                                                
+                             PROBLEM STATUS SECTION                             
+
+ BLOCK STATUS                            
+ ------------
+
+ ****************************************************************************
+ *                                                                          *
+ * Calculations were completed with warnings                                *
+ *                                                                          *
+ * Properties estimation was completed with warnings                        *
+ *                                                                          *
+ ****************************************************************************
