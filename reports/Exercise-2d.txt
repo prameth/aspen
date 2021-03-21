@@ -1,0 +1,324 @@
+
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION REPORT                      + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       MARCH 21, 2021      
+ VERSION: 37.0   Build 395                               SUNDAY      
+ INSTALLATION:                                           9:22:49 P.M.        
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/21/2021  PAGE    I
+                                                                                
+
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+                               TABLE OF CONTENTS                                
+
+
+            RUN CONTROL SECTION....................................  1
+                 RUN CONTROL INFORMATION...........................  1
+
+            FLOWSHEET SECTION......................................  2
+                 FLOWSHEET CONNECTIVITY BY STREAMS.................  2
+                 FLOWSHEET CONNECTIVITY BY BLOCKS..................  2
+                 COMPUTATIONAL SEQUENCE............................  2
+                 OVERALL FLOWSHEET BALANCE.........................  2
+
+            SENSITIVITY BLOCK SECTION..............................  3
+                 SENSITIVITY BLOCK:  S-1...........................  3
+
+            PHYSICAL PROPERTIES SECTION............................  5
+                 COMPONENTS........................................  5
+
+            U-O-S BLOCK SECTION....................................  6
+                 BLOCK:  B1       MODEL: MIXER.....................  6
+
+            STREAM SECTION.........................................  7
+                 FEED PRODUCT RECY.................................  7
+
+            PROBLEM STATUS SECTION.................................  8
+                 BLOCK STATUS......................................  8
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/21/2021  PAGE 1       
+                                                                                
+                              RUN CONTROL SECTION                               
+
+ RUN CONTROL INFORMATION                 
+ -----------------------
+
+ THIS COPY OF ASPEN PLUS LICENSED TO                                 
+
+ TYPE OF RUN: NEW 
+
+ INPUT FILE NAME: _0512xqm.inm
+
+ OUTPUT PROBLEM DATA FILE NAME: _0512xqm 
+ LOCATED IN:                    
+
+
+ PDF SIZE USED FOR INPUT TRANSLATION:
+   NUMBER OF FILE RECORDS (PSIZE) =     0
+   NUMBER OF IN-CORE RECORDS      =   256
+ PSIZE NEEDED FOR SIMULATION    =   256
+
+ CALLING PROGRAM NAME:          apmain  
+ LOCATED IN: C:\Program Files\AspenTech\Aspen Plus V11.0\Engine\\xeq
+
+ SIMULATION REQUESTED FOR ENTIRE FLOWSHEET
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/21/2021  PAGE 2       
+                                                                                
+                               FLOWSHEET SECTION                                
+
+ FLOWSHEET CONNECTIVITY BY STREAMS       
+ ---------------------------------
+
+   STREAM     SOURCE     DEST           STREAM     SOURCE     DEST
+   RECY       ----       B1             FEED       ----       B1      
+   PRODUCT    B1         ----                                         
+
+ FLOWSHEET CONNECTIVITY BY BLOCKS        
+ --------------------------------
+
+   BLOCK        INLETS                         OUTLETS
+   B1           FEED RECY                      PRODUCT                     
+
+ COMPUTATIONAL SEQUENCE                  
+ ----------------------
+
+ SEQUENCE USED WAS:
+    S-1 B1                                                                 
+    (RETURN S-1)                                                           
+
+ OVERALL FLOWSHEET BALANCE               
+ -------------------------
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    CONVENTIONAL COMPONENTS (KMOL/HR )
+       ISOBUT                    140.000         140.000         0.00000    
+       1-BUTENE                  10.0000         10.0000         0.00000    
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            150.000         150.000        0.189478E-15
+       MASS(KG/HR   )            8698.35         8698.35         0.00000    
+       ENTHALPY(CAL/SEC )      -0.123134E+07   -0.123134E+07   -0.189087E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/21/2021  PAGE 3       
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1                 
+ -----------------------
+
+   SAMPLED VARIABLES: 
+     PRODPURE : ISOBUT MOLEFRAC IN STREAM PRODUCT SUBSTREAM MIXED   
+
+   VARIED VARIABLES: 
+     VARY    1: TOTAL MOLEFLOW IN STREAM RECY SUBSTREAM MIXED   
+                LOWER LIMIT =     10.0000  KMOL/HR         
+                UPPER LIMIT =     50.0000  KMOL/HR         
+                INCREMENT   =      1.0000                  
+
+   TABULATED VARIABLES: 
+     COLUMN   2: PRODPURE
+
+ ---------------------------
+ !  VARY   1  !  PRODPURE  !
+ !  RECY      !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !            !
+ !            !            !
+ !============!============!
+ !    10.0000 !     0.9818 !
+ !    11.0000 !     0.9802 !
+ !    12.0000 !     0.9786 !
+ !    13.0000 !     0.9770 !
+ !    14.0000 !     0.9754 !
+ !------------+------------!
+ !    15.0000 !     0.9739 !
+ !    16.0000 !     0.9724 !
+ !    17.0000 !     0.9709 !
+ !    18.0000 !     0.9695 !
+ !    19.0000 !     0.9681 !
+ !------------+------------!
+ !    20.0000 !     0.9667 !
+ !    21.0000 !     0.9653 !
+ !    22.0000 !     0.9639 !
+ !    23.0000 !     0.9626 !
+ !    24.0000 !     0.9613 !
+ !------------+------------!
+ !    25.0000 !     0.9600 !
+ !    26.0000 !     0.9587 !
+ !    27.0000 !     0.9575 !
+ !    28.0000 !     0.9563 !
+ !    29.0000 !     0.9550 !
+ ---------------------------
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/21/2021  PAGE 4       
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1 (CONTINUED)                 
+
+ ---------------------------
+ !  VARY   1  !  PRODPURE  !
+ !  RECY      !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !            !
+ !            !            !
+ !============!============!
+ !    30.0000 !     0.9538 !
+ !    31.0000 !     0.9527 !
+ !    32.0000 !     0.9515 !
+ !    33.0000 !     0.9504 !
+ !    34.0000 !     0.9493 !
+ !------------+------------!
+ !    35.0000 !     0.9481 !
+ !    36.0000 !     0.9471 !
+ !    37.0000 !     0.9460 !
+ !    38.0000 !     0.9449 !
+ !    39.0000 !     0.9439 !
+ !------------+------------!
+ !    40.0000 !     0.9429 !
+ !    41.0000 !     0.9418 !
+ !    42.0000 !     0.9408 !
+ !    43.0000 !     0.9399 !
+ !    44.0000 !     0.9389 !
+ !------------+------------!
+ !    45.0000 !     0.9379 !
+ !    46.0000 !     0.9370 !
+ !    47.0000 !     0.9361 !
+ !    48.0000 !     0.9351 !
+ !    49.0000 !     0.9342 !
+ !------------+------------!
+ !    50.0000 !     0.9333 !
+ !    50.0000 !     0.9333 !
+ ---------------------------
+
+   VALUES OF ACCESSED FORTRAN VARIABLES ON MOST RECENT SIMULATION PASS:
+     VARIABLE          VALUE         UNITS
+     --------          -----         -----
+     PRODPURE        0.933333                        
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/21/2021  PAGE 5       
+                                                                                
+                          PHYSICAL PROPERTIES SECTION                           
+
+ COMPONENTS                              
+ ----------
+
+  ID       TYPE  ALIAS          NAME
+   ISOBUT   C     C4H10-2        ISOBUTANE                       
+   1-BUTENE C     C4H8-1         1-BUTENE                        
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/21/2021  PAGE 6       
+                                                                                
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  B1       MODEL: MIXER           
+ -----------------------------
+   INLET STREAMS:         FEED        RECY    
+   OUTLET STREAM:         PRODUCT 
+   PROPERTY OPTION SET:   CHAO-SEA  SCATCHARD-HILDEBRAND / REDLICH-KWONG        
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            150.000         150.000         0.00000    
+       MASS(KG/HR   )            8698.35         8698.35         0.00000    
+       ENTHALPY(CAL/SEC )      -0.123134E+07   -0.123134E+07   -0.189087E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE      FLASH
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   OUTLET PRESSURE:  MINIMUM OF INLET STREAM PRESSURES
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/21/2021  PAGE 7       
+                                                                                
+                                 STREAM SECTION                                 
+
+ FEED PRODUCT RECY                               
+ -----------------
+
+ STREAM ID               FEED       PRODUCT    RECY    
+ FROM :                  ----       B1         ----    
+ TO   :                  B1         ----       B1      
+
+ SUBSTREAM: MIXED   
+ PHASE:                  VAPOR      VAPOR      VAPOR  
+ COMPONENTS: KMOL/HR         
+   ISOBUT               100.0000   140.0000    40.0000
+   1-BUTENE               0.0       10.0000    10.0000
+ COMPONENTS: MOLE FRAC       
+   ISOBUT                 1.0000     0.9333     0.8000
+   1-BUTENE               0.0     6.6667-02     0.2000
+ TOTAL FLOW:         
+   KMOL/HR              100.0000   150.0000    50.0000
+   KG/HR               5812.3400  8698.3512  2886.0112
+   L/MIN               4.3962+04  6.5944+04  2.1983+04
+ STATE VARIABLES:    
+   TEMP   C              50.0000    50.0000    50.0000
+   PRES   BAR             1.0000     1.0000     1.0000
+   VFRAC                  1.0000     1.0000     1.0000
+   LFRAC                  0.0        0.0        0.0   
+   SFRAC                  0.0        0.0        0.0   
+ ENTHALPY:           
+   CAL/MOL            -3.1689+04 -2.9552+04 -2.5278+04
+   CAL/GM              -545.2052  -509.6168  -437.9428
+   CAL/SEC            -8.8026+05 -1.2313+06 -3.5109+05
+ ENTROPY:            
+   CAL/MOL-K            -89.0816   -86.3324   -81.2993
+   CAL/GM-K              -1.5326    -1.4888    -1.4085
+ DENSITY:            
+   MOL/CC              3.7912-05  3.7911-05  3.7909-05
+   GM/CC               2.2036-03  2.1984-03  2.1881-03
+ AVG MW                  58.1234    57.9890    57.7202
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/21/2021  PAGE 8       
+                                                                                
+                             PROBLEM STATUS SECTION                             
+
+ BLOCK STATUS                            
+ ------------
+
+ ****************************************************************************
+ *                                                                          *
+ * Calculations were completed normally                                     *
+ *                                                                          *
+ * All Unit Operation blocks were completed normally                        *
+ *                                                                          *
+ * All streams were flashed normally                                        *
+ *                                                                          *
+ * All Sensitivity blocks were completed normally                           *
+ *                                                                          *
+ ****************************************************************************
