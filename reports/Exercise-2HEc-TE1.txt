@@ -1,0 +1,203 @@
+
+ BLOCK:  B1       MODEL: HEATX           
+ -----------------------------
+   HOT SIDE:
+   ---------
+   INLET STREAM:             HOTIN   
+   OUTLET STREAM:            HOTOUT  
+   PROPERTY OPTION SET:   UNIFAC    UNIFAC / REDLICH-KWONG                      
+   COLD SIDE:
+   ----------
+   INLET STREAM:             COLDIN  
+   OUTLET STREAM:            COLDOUT 
+   PROPERTY OPTION SET:   UNIFAC    UNIFAC / REDLICH-KWONG                      
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            248.448         248.448         0.00000    
+       MASS(KG/HR   )            20560.0         20560.0         0.00000    
+       ENTHALPY(CAL/SEC )      -0.782007E+07   -0.782007E+07    0.238188E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.115104E+09  KG/HR           
+    PRODUCT STREAMS CO2E         0.115104E+09  KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+
+   FLASH SPECS FOR HOT SIDE:
+   TWO    PHASE      FLASH
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FLASH SPECS FOR COLD SIDE:
+   TWO    PHASE      FLASH
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FLOW DIRECTION AND SPECIFICATION:
+     COUNTERCURRENT   HEAT EXCHANGER
+     SPECIFIED COLD OUTLET TEMP    
+     SPECIFIED VALUE                C                       26.8500
+     LMTD CORRECTION FACTOR                                  1.00000
+
+   PRESSURE SPECIFICATION:
+     HOT  SIDE PRESSURE DROP        BAR                      0.0000
+     COLD SIDE PRESSURE DROP        BAR                      0.0000
+
+   HEAT TRANSFER COEFFICIENT SPECIFICATION:
+     HOT LIQUID    COLD LIQUID      CAL/SEC-SQCM-K           0.0203
+     HOT 2-PHASE   COLD LIQUID      CAL/SEC-SQCM-K           0.0203
+     HOT VAPOR     COLD LIQUID      CAL/SEC-SQCM-K           0.0203
+     HOT LIQUID    COLD 2-PHASE     CAL/SEC-SQCM-K           0.0203
+     HOT 2-PHASE   COLD 2-PHASE     CAL/SEC-SQCM-K           0.0203
+     HOT VAPOR     COLD 2-PHASE     CAL/SEC-SQCM-K           0.0203
+     HOT LIQUID    COLD VAPOR       CAL/SEC-SQCM-K           0.0203
+     HOT 2-PHASE   COLD VAPOR       CAL/SEC-SQCM-K           0.0203
+     HOT VAPOR     COLD VAPOR       CAL/SEC-SQCM-K           0.0203
+
+                        ***  OVERALL RESULTS  ***
+
+   STREAMS:
+                   --------------------------------------
+                   |                                    |
+   HOTIN     ----->|                HOT                 |-----> HOTOUT  
+   T=  7.6850D+01  |                                    |       T=  5.3261D+01
+   P=  2.0265D+00  |                                    |       P=  2.0265D+00
+   V=  0.0000D+00  |                                    |       V=  0.0000D+00
+                   |                                    |
+   COLDOUT   <-----|                COLD                |<----- COLDIN  
+   T=  2.6850D+01  |                                    |       T= -3.3150D+01
+   P=  7.0927D+00  |                                    |       P=  7.0927D+00
+   V=  0.0000D+00  |                                    |       V=  0.0000D+00
+                   --------------------------------------
+
+   DUTY AND AREA:
+     CALCULATED HEAT DUTY           CAL/SEC              40366.7325
+     CALCULATED (REQUIRED) AREA     SQM                      2.9875
+     ACTUAL EXCHANGER AREA          SQM                      2.9875
+     PER CENT OVER-DESIGN                                    0.0000
+
+   HEAT TRANSFER COEFFICIENT:
+     AVERAGE COEFFICIENT (DIRTY)    CAL/SEC-SQCM-K           0.0203
+     UA (DIRTY)                     CAL/SEC-K              606.5283
+
+   LOG-MEAN TEMPERATURE DIFFERENCE:
+     LMTD CORRECTION FACTOR                                  1.0000
+     LMTD (CORRECTED)               C                       66.5537
+     NUMBER OF SHELLS IN SERIES                               1
+
+   PRESSURE DROP:
+     HOTSIDE, TOTAL                 BAR                      0.0000
+     COLDSIDE, TOTAL                BAR                      0.0000
+
+                        ***  ZONE RESULTS  ***
+
+   TEMPERATURE LEAVING EACH ZONE:
+
+                                     HOT 
+         -------------------------------------------------------------
+         |                                                           |
+ HOT IN  |                           LIQ                             | HOT OUT 
+ ------> |                                                           |------>
+   76.8  |                                                           |   53.3
+         |                                                           |
+ COLDOUT |                           LIQ                             | COLDIN  
+ <------ |                                                           |<------
+   26.8  |                                                           |  -33.2
+         |                                                           |
+         -------------------------------------------------------------
+                                     COLD
+
+   ZONE HEAT TRANSFER AND AREA:
+
+   ZONE       HEAT DUTY       AREA       LMTD       AVERAGE U       UA
+              CAL/SEC         SQM         C         CAL/SEC-SQCM-K  CAL/SEC-K       
+     1      40366.733         2.9875      66.5537     0.0203         606.5283
+
+ HEATX COLD-TQCU B1       TQCURV INLET   
+ -------------------------------------
+   PRESSURE PROFILE:      CONSTANT2   
+   PRESSURE DROP:         0.0         BAR             
+   PROPERTY OPTION SET:   UNIFAC    UNIFAC / REDLICH-KWONG                      
+
+ -----------------------------------------------------
+ !  DUTY      !  PRES      !  TEMP      !  VFRAC     !
+ !            !            !            !            !
+ !            !            !            !            !
+ !            !            !            !            !
+ !  CAL/SEC   !  BAR       !  C         !            !
+ !            !            !            !            !
+ !============!============!============!============!
+ !     0.0    !     7.0927 !    26.8500 !     0.0    !
+ !  1922.2254 !     7.0927 !    24.1351 !     0.0    !
+ !  3844.4507 !     7.0927 !    21.4001 !     0.0    !
+ !  5766.6761 !     7.0927 !    18.6461 !     0.0    !
+ !  7688.9014 !     7.0927 !    15.8741 !     0.0    !
+ !------------+------------+------------+------------!
+ !  9611.1268 !     7.0927 !    13.0852 !     0.0    !
+ !  1.1533+04 !     7.0927 !    10.2804 !     0.0    !
+ !  1.3456+04 !     7.0927 !     7.4607 !     0.0    !
+ !  1.5378+04 !     7.0927 !     4.6269 !     0.0    !
+ !  1.7300+04 !     7.0927 !     1.7799 !     0.0    !
+ !------------+------------+------------+------------!
+ !  1.9222+04 !     7.0927 !    -1.0795 !     0.0    !
+ !  2.1144+04 !     7.0927 !    -3.9504 !     0.0    !
+ !  2.3067+04 !     7.0927 !    -6.8322 !     0.0    !
+ !  2.4989+04 !     7.0927 !    -9.7240 !     0.0    !
+ !  2.6911+04 !     7.0927 !   -12.6253 !     0.0    !
+ !------------+------------+------------+------------!
+ !  2.8833+04 !     7.0927 !   -15.5355 !     0.0    !
+ !  3.0756+04 !     7.0927 !   -18.4538 !     0.0    !
+ !  3.2678+04 !     7.0927 !   -21.3798 !     0.0    !
+ !  3.4600+04 !     7.0927 !   -24.3129 !     0.0    !
+ !  3.6522+04 !     7.0927 !   -27.2526 !     0.0    !
+ !------------+------------+------------+------------!
+ !  3.8445+04 !     7.0927 !   -30.1984 !     0.0    !
+ !  4.0367+04 !     7.0927 !   -33.1500 !     0.0    !
+ -----------------------------------------------------
+
+ HEATX HOT-TQCUR B1       TQCURV INLET   
+ -------------------------------------
+   PRESSURE PROFILE:      CONSTANT2   
+   PRESSURE DROP:         0.0         BAR             
+   PROPERTY OPTION SET:   UNIFAC    UNIFAC / REDLICH-KWONG                      
+
+ -----------------------------------------------------
+ !  DUTY      !  PRES      !  TEMP      !  VFRAC     !
+ !            !            !            !            !
+ !            !            !            !            !
+ !            !            !            !            !
+ !  CAL/SEC   !  BAR       !  C         !            !
+ !            !            !            !            !
+ !============!============!============!============!
+ !     0.0    !     2.0265 !    76.8500 !     0.0    !
+ !  1922.2254 !     2.0265 !    75.7492 !     0.0    !
+ !  3844.4507 !     2.0265 !    74.6463 !     0.0    !
+ !  5766.6761 !     2.0265 !    73.5412 !     0.0    !
+ !  7688.9014 !     2.0265 !    72.4340 !     0.0    !
+ !------------+------------+------------+------------!
+ !  9611.1268 !     2.0265 !    71.3245 !     0.0    !
+ !  1.1533+04 !     2.0265 !    70.2128 !     0.0    !
+ !  1.3456+04 !     2.0265 !    69.0988 !     0.0    !
+ !  1.5378+04 !     2.0265 !    67.9826 !     0.0    !
+ !  1.7300+04 !     2.0265 !    66.8642 !     0.0    !
+ !------------+------------+------------+------------!
+ !  1.9222+04 !     2.0265 !    65.7435 !     0.0    !
+ !  2.1144+04 !     2.0265 !    64.6205 !     0.0    !
+ !  2.3067+04 !     2.0265 !    63.4951 !     0.0    !
+ !  2.4989+04 !     2.0265 !    62.3675 !     0.0    !
+ !  2.6911+04 !     2.0265 !    61.2375 !     0.0    !
+ !------------+------------+------------+------------!
+ !  2.8833+04 !     2.0265 !    60.1052 !     0.0    !
+ !  3.0756+04 !     2.0265 !    58.9705 !     0.0    !
+ !  3.2678+04 !     2.0265 !    57.8334 !     0.0    !
+ !  3.4600+04 !     2.0265 !    56.6939 !     0.0    !
+ !  3.6522+04 !     2.0265 !    55.5521 !     0.0    !
+ !------------+------------+------------+------------!
+ !  3.8445+04 !     2.0265 !    54.4078 !     0.0    !
+ !  4.0367+04 !     2.0265 !    53.2610 !     0.0    !
+ -----------------------------------------------------
