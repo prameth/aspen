@@ -1,0 +1,853 @@
+
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION REPORT                      + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       MARCH 22, 2021      
+ VERSION: 37.0   Build 395                               MONDAY      
+ INSTALLATION:                                           10:42:16 A.M.       
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE    I
+                                                                                
+
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+                               TABLE OF CONTENTS                                
+
+
+            RUN CONTROL SECTION....................................  1
+                 RUN CONTROL INFORMATION...........................  1
+
+            FLOWSHEET SECTION......................................  2
+                 FLOWSHEET CONNECTIVITY BY STREAMS.................  2
+                 FLOWSHEET CONNECTIVITY BY BLOCKS..................  2
+                 CONVERGENCE STATUS SUMMARY........................  2
+                 DESIGN-SPEC:  DS-1................................  2
+                 CONVERGENCE BLOCK:  $OLVER01......................  2
+                 COMPUTATIONAL SEQUENCE............................  3
+                 OVERALL FLOWSHEET BALANCE.........................  3
+
+            SENSITIVITY BLOCK SECTION..............................  5
+                 SENSITIVITY BLOCK:  S-1...........................  5
+
+            PHYSICAL PROPERTIES SECTION............................ 15
+                 COMPONENTS........................................ 15
+
+            U-O-S BLOCK SECTION.................................... 16
+                 BLOCK:  B1       MODEL: MIXER..................... 16
+
+            STREAM SECTION......................................... 17
+                 PROD S1 S2........................................ 17
+
+            PROBLEM STATUS SECTION................................. 18
+                 BLOCK STATUS...................................... 18
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 1       
+                                                                                
+                              RUN CONTROL SECTION                               
+
+ RUN CONTROL INFORMATION                 
+ -----------------------
+
+ THIS COPY OF ASPEN PLUS LICENSED TO                                 
+
+ TYPE OF RUN: NEW 
+
+ INPUT FILE NAME: _1314mkk.inm
+
+ OUTPUT PROBLEM DATA FILE NAME: _1314mkk 
+ LOCATED IN:                    
+
+
+ PDF SIZE USED FOR INPUT TRANSLATION:
+   NUMBER OF FILE RECORDS (PSIZE) =     0
+   NUMBER OF IN-CORE RECORDS      =   256
+ PSIZE NEEDED FOR SIMULATION    =   256
+
+ CALLING PROGRAM NAME:          apmain  
+ LOCATED IN: C:\Program Files\AspenTech\Aspen Plus V11.0\Engine\\xeq
+
+ SIMULATION REQUESTED FOR ENTIRE FLOWSHEET
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 2       
+                                                                                
+                               FLOWSHEET SECTION                                
+
+ FLOWSHEET CONNECTIVITY BY STREAMS       
+ ---------------------------------
+
+   STREAM     SOURCE     DEST           STREAM     SOURCE     DEST
+   S2         ----       B1             S1         ----       B1      
+   PROD       B1         ----                                         
+
+ FLOWSHEET CONNECTIVITY BY BLOCKS        
+ --------------------------------
+
+   BLOCK        INLETS                         OUTLETS
+   B1           S1 S2                          PROD                        
+
+ CONVERGENCE STATUS SUMMARY              
+ --------------------------
+
+   DESIGN-SPEC SUMMARY
+   ===================
+
+
+   DESIGN                                                            CONV
+   SPEC      ERROR        TOLERANCE    ERR/TOL      VARIABLE   STAT  BLOCK
+   ------    -----        ---------    -------      --------   ----  -----
+   DS-1     -0.23311E-04  0.10000E-03 -0.23311       203.81     #    $OLVER01
+
+   #  = CONVERGED
+   *  = NOT CONVERGED
+   LB = AT LOWER BOUNDS
+   UB = AT UPPER BOUNDS
+
+ DESIGN-SPEC:  DS-1                      
+ ------------------
+
+   SAMPLED VARIABLES:
+     PRODTEMP : TEMPERATURE IN STREAM PROD SUBSTREAM MIXED  
+
+   SPECIFICATION:
+     MAKE PRODTEMP APPROACH 85.0000  
+     WITHIN          0.000100000                              
+
+   MANIPULATED VARIABLES:
+     VARY     : TOTAL MOLEFLOW IN STREAM S2 SUBSTREAM MIXED 
+     LOWER LIMIT =         158.757                    KMOL/HR         
+     UPPER LIMIT =         226.796                    KMOL/HR         
+     FINAL VALUE =         203.811                    KMOL/HR         
+
+   VALUES OF ACCESSED FORTRAN VARIABLES:
+     VARIABLE      VALUE AT START      FINAL VALUE     UNITS
+                      OF LOOP                               
+     --------      --------------      -----------     -----
+     PRODTEMP        85.0000            85.0000        F               
+
+ CONVERGENCE BLOCK:  $OLVER01            
+ ----------------------------
+     SPECS: DS-1
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 3       
+                                                                                
+                               FLOWSHEET SECTION                                
+
+ CONVERGENCE BLOCK:  $OLVER01 (CONTINUED)            
+     MAXIT=   30 STEP-SIZE=    50.000    % OF RANGE
+                 MAX-STEP=       100.    % OF RANGE
+                 XTOL=       1.000000E-08
+     THE NEW ALGORITHM WAS USED WITH BRACKETING=NO      
+     METHOD: SECANT        STATUS: CONVERGED       
+     TOTAL NUMBER OF ITERATIONS:  1471
+     NUMBER OF ITERATIONS ON LAST OUTER LOOP:     1
+
+                          *** FINAL VALUES ***
+
+ 
+                     DESIGN SP
+     VAR#  VAR NAME  CALCULATOR  VARIABLE DESCRIPTION      UNIT         VALUE          PREV VALUE     ERR/TOL
+     ----  --------  ----------  --------------------      ----         -----          ----------     -------
+        1  VARY      DS-1        S2.MIXED.TOTAL.MOLEFLOW   KMOL/HR        203.8108       203.8108        -0.2331      
+
+                          *** ITERATION HISTORY *** 
+
+     DESIGN-SPEC ID: DS-1                                                                                     
+     ITERATED:  TOTAL MOLEFLOW IN STREAM S2 SUBSTREAM MIXED 
+
+     ITERATION  VARIABLE         ERROR          ERR/TOL 
+     ---------  --------         -----          ------- 
+          1      203.8          -0.2331E-04    -0.2331    
+
+ COMPUTATIONAL SEQUENCE                  
+ ----------------------
+
+ SEQUENCE USED WAS:
+    *S-1                                                                   
+    |  $OLVER01 B1                                                         
+    |  (RETURN $OLVER01)                                                   
+    (RETURN *S-1)                                                          
+
+ OVERALL FLOWSHEET BALANCE               
+ -------------------------
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    CONVENTIONAL COMPONENTS (KMOL/HR )
+       TOLUENE                   453.592         453.592         0.00000    
+       ETHYLENE                  203.811         203.811         0.00000    
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            657.403         657.403         0.00000    
+       MASS(KG/HR   )            47511.9         47511.9        0.153140E-15
+       ENTHALPY(CAL/SEC )       0.112053E+07    0.112053E+07    0.207787E-15
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 4       
+                                                                                
+                               FLOWSHEET SECTION                                
+
+ OVERALL FLOWSHEET BALANCE (CONTINUED)               
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 5       
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1                 
+ -----------------------
+
+   SAMPLED VARIABLES: 
+     PRODTEMP : TEMPERATURE IN STREAM PROD SUBSTREAM MIXED  
+
+   VARIED VARIABLES: 
+     VARY    1: TOTAL MOLEFLOW IN STREAM S2 SUBSTREAM MIXED 
+                LOWER LIMIT =    158.7573  KMOL/HR         
+                UPPER LIMIT =    226.7962  KMOL/HR         
+                INCREMENT   =      0.2268                  
+
+   TABULATED VARIABLES: 
+     COLUMN   2: PRODTEMP
+
+
+     **********************************************************************
+     *                                                                    *
+
+     *  WARNING: VARIED VARIABLE IS CHANGED OUTSIDE OF SENSITIVITY BLOCK  *
+
+     *                                                                    *
+     **********************************************************************
+
+
+
+ ---------------------------
+ !  VARY   1  !  PRODTEMP  !
+ !  S2        !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !  F         !
+ !            !            !
+ !============!============!
+ !   158.7573 !    84.9999 !
+ !   158.9841 !    85.0000 !
+ !   159.2109 !    85.0000 !
+ !   159.4377 !    85.0000 !
+ !   159.6645 !    85.0000 !
+ ---------------------------
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 6       
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1 (CONTINUED)                 
+
+ ---------------------------
+ !  VARY   1  !  PRODTEMP  !
+ !  S2        !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !  F         !
+ !            !            !
+ !============!============!
+ !   159.8913 !    85.0000 !
+ !   160.1181 !    85.0000 !
+ !   160.3449 !    85.0000 !
+ !   160.5717 !    85.0000 !
+ !   160.7985 !    85.0000 !
+ !------------+------------!
+ !   161.0253 !    85.0000 !
+ !   161.2521 !    85.0000 !
+ !   161.4789 !    85.0000 !
+ !   161.7057 !    85.0000 !
+ !   161.9325 !    85.0000 !
+ !------------+------------!
+ !   162.1593 !    85.0000 !
+ !   162.3861 !    85.0000 !
+ !   162.6129 !    85.0000 !
+ !   162.8397 !    85.0000 !
+ !   163.0665 !    85.0000 !
+ !------------+------------!
+ !   163.2933 !    85.0000 !
+ !   163.5200 !    85.0000 !
+ !   163.7468 !    85.0000 !
+ !   163.9736 !    85.0000 !
+ !   164.2004 !    85.0000 !
+ !------------+------------!
+ !   164.4272 !    85.0000 !
+ !   164.6540 !    85.0000 !
+ !   164.8808 !    85.0000 !
+ !   165.1076 !    85.0000 !
+ !   165.3344 !    85.0000 !
+ !------------+------------!
+ !   165.5612 !    85.0000 !
+ !   165.7880 !    85.0000 !
+ !   166.0148 !    85.0000 !
+ !   166.2416 !    85.0000 !
+ !   166.4684 !    85.0000 !
+ !------------+------------!
+ !   166.6952 !    85.0000 !
+ !   166.9220 !    85.0000 !
+ !   167.1488 !    85.0000 !
+ !   167.3756 !    85.0000 !
+ !   167.6024 !    85.0000 !
+ ---------------------------
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 7       
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1 (CONTINUED)                 
+
+ ---------------------------
+ !  VARY   1  !  PRODTEMP  !
+ !  S2        !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !  F         !
+ !            !            !
+ !============!============!
+ !   167.8292 !    85.0000 !
+ !   168.0560 !    85.0000 !
+ !   168.2828 !    85.0000 !
+ !   168.5096 !    85.0000 !
+ !   168.7364 !    85.0000 !
+ !------------+------------!
+ !   168.9632 !    85.0000 !
+ !   169.1900 !    85.0000 !
+ !   169.4168 !    85.0000 !
+ !   169.6435 !    85.0000 !
+ !   169.8703 !    85.0000 !
+ !------------+------------!
+ !   170.0971 !    85.0000 !
+ !   170.3239 !    85.0000 !
+ !   170.5507 !    85.0000 !
+ !   170.7775 !    85.0000 !
+ !   171.0043 !    85.0000 !
+ !------------+------------!
+ !   171.2311 !    85.0000 !
+ !   171.4579 !    85.0000 !
+ !   171.6847 !    85.0000 !
+ !   171.9115 !    85.0001 !
+ !   172.1383 !    85.0001 !
+ !------------+------------!
+ !   172.3651 !    85.0001 !
+ !   172.5919 !    85.0001 !
+ !   172.8187 !    85.0001 !
+ !   173.0455 !    85.0001 !
+ !   173.2723 !    85.0001 !
+ !------------+------------!
+ !   173.4991 !    85.0001 !
+ !   173.7259 !    85.0001 !
+ !   173.9527 !    85.0001 !
+ !   174.1795 !    85.0001 !
+ !   174.4063 !    85.0001 !
+ !------------+------------!
+ !   174.6331 !    85.0001 !
+ !   174.8599 !    85.0001 !
+ !   175.0867 !    85.0001 !
+ !   175.3135 !    85.0001 !
+ !   175.5402 !    85.0001 !
+ ---------------------------
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 8       
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1 (CONTINUED)                 
+
+ ---------------------------
+ !  VARY   1  !  PRODTEMP  !
+ !  S2        !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !  F         !
+ !            !            !
+ !============!============!
+ !   175.7670 !    85.0001 !
+ !   175.9938 !    85.0001 !
+ !   176.2206 !    85.0001 !
+ !   176.4474 !    85.0001 !
+ !   176.6742 !    85.0001 !
+ !------------+------------!
+ !   176.9010 !    85.0001 !
+ !   177.1278 !    85.0001 !
+ !   177.3546 !    85.0001 !
+ !   177.5814 !    85.0001 !
+ !   177.8082 !    85.0001 !
+ !------------+------------!
+ !   178.0350 !    85.0001 !
+ !   178.2618 !    85.0001 !
+ !   178.4886 !    85.0001 !
+ !   178.7154 !    85.0001 !
+ !   178.9422 !    85.0001 !
+ !------------+------------!
+ !   179.1690 !    85.0001 !
+ !   179.3958 !    85.0001 !
+ !   179.6226 !    85.0001 !
+ !   179.8494 !    85.0001 !
+ !   180.0762 !    85.0001 !
+ !------------+------------!
+ !   180.3030 !    85.0001 !
+ !   180.5298 !    85.0001 !
+ !   180.7566 !    85.0001 !
+ !   180.9834 !    85.0000 !
+ !   181.2102 !    85.0000 !
+ !------------+------------!
+ !   181.4369 !    85.0000 !
+ !   181.6637 !    85.0000 !
+ !   181.8905 !    85.0000 !
+ !   182.1173 !    85.0000 !
+ !   182.3441 !    85.0000 !
+ !------------+------------!
+ !   182.5709 !    85.0000 !
+ !   182.7977 !    85.0000 !
+ !   183.0245 !    85.0000 !
+ !   183.2513 !    85.0000 !
+ !   183.4781 !    85.0000 !
+ ---------------------------
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 9       
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1 (CONTINUED)                 
+
+ ---------------------------
+ !  VARY   1  !  PRODTEMP  !
+ !  S2        !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !  F         !
+ !            !            !
+ !============!============!
+ !   183.7049 !    85.0000 !
+ !   183.9317 !    85.0000 !
+ !   184.1585 !    85.0000 !
+ !   184.3853 !    85.0000 !
+ !   184.6121 !    85.0000 !
+ !------------+------------!
+ !   184.8389 !    85.0000 !
+ !   185.0657 !    85.0000 !
+ !   185.2925 !    85.0000 !
+ !   185.5193 !    85.0000 !
+ !   185.7461 !    85.0000 !
+ !------------+------------!
+ !   185.9729 !    85.0000 !
+ !   186.1997 !    85.0000 !
+ !   186.4265 !    85.0000 !
+ !   186.6533 !    85.0000 !
+ !   186.8801 !    85.0000 !
+ !------------+------------!
+ !   187.1069 !    85.0000 !
+ !   187.3336 !    85.0000 !
+ !   187.5604 !    85.0000 !
+ !   187.7872 !    85.0000 !
+ !   188.0140 !    85.0000 !
+ !------------+------------!
+ !   188.2408 !    85.0000 !
+ !   188.4676 !    85.0000 !
+ !   188.6944 !    85.0000 !
+ !   188.9212 !    85.0000 !
+ !   189.1480 !    85.0000 !
+ !------------+------------!
+ !   189.3748 !    85.0000 !
+ !   189.6016 !    85.0000 !
+ !   189.8284 !    85.0000 !
+ !   190.0552 !    85.0000 !
+ !   190.2820 !    85.0000 !
+ !------------+------------!
+ !   190.5088 !    85.0000 !
+ !   190.7356 !    85.0000 !
+ !   190.9624 !    85.0000 !
+ !   191.1892 !    85.0000 !
+ !   191.4160 !    85.0000 !
+ ---------------------------
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 10      
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1 (CONTINUED)                 
+
+ ---------------------------
+ !  VARY   1  !  PRODTEMP  !
+ !  S2        !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !  F         !
+ !            !            !
+ !============!============!
+ !   191.6428 !    85.0000 !
+ !   191.8696 !    85.0000 !
+ !   192.0964 !    85.0000 !
+ !   192.3232 !    85.0000 !
+ !   192.5500 !    85.0000 !
+ !------------+------------!
+ !   192.7768 !    85.0000 !
+ !   193.0036 !    85.0000 !
+ !   193.2303 !    85.0000 !
+ !   193.4571 !    85.0000 !
+ !   193.6839 !    85.0000 !
+ !------------+------------!
+ !   193.9107 !    85.0000 !
+ !   194.1375 !    85.0000 !
+ !   194.3643 !    85.0000 !
+ !   194.5911 !    85.0000 !
+ !   194.8179 !    85.0000 !
+ !------------+------------!
+ !   195.0447 !    85.0001 !
+ !   195.2715 !    85.0000 !
+ !   195.4983 !    85.0000 !
+ !   195.7251 !    85.0000 !
+ !   195.9519 !    84.9999 !
+ !------------+------------!
+ !   196.1787 !    85.0000 !
+ !   196.4055 !    84.9999 !
+ !   196.6323 !    85.0001 !
+ !   196.8591 !    84.9999 !
+ !   197.0859 !    84.9999 !
+ !------------+------------!
+ !   197.3127 !    85.0001 !
+ !   197.5395 !    85.0001 !
+ !   197.7663 !    85.0000 !
+ !   197.9931 !    85.0000 !
+ !   198.2199 !    85.0001 !
+ !------------+------------!
+ !   198.4467 !    85.0001 !
+ !   198.6735 !    84.9999 !
+ !   198.9003 !    84.9999 !
+ !   199.1271 !    85.0001 !
+ !   199.3538 !    84.9999 !
+ ---------------------------
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 11      
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1 (CONTINUED)                 
+
+ ---------------------------
+ !  VARY   1  !  PRODTEMP  !
+ !  S2        !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !  F         !
+ !            !            !
+ !============!============!
+ !   199.5806 !    85.0000 !
+ !   199.8074 !    85.0001 !
+ !   200.0342 !    85.0000 !
+ !   200.2610 !    85.0000 !
+ !   200.4878 !    85.0000 !
+ !------------+------------!
+ !   200.7146 !    85.0001 !
+ !   200.9414 !    84.9999 !
+ !   201.1682 !    85.0000 !
+ !   201.3950 !    84.9999 !
+ !   201.6218 !    85.0000 !
+ !------------+------------!
+ !   201.8486 !    84.9999 !
+ !   202.0754 !    85.0000 !
+ !   202.3022 !    84.9999 !
+ !e  202.5290 !    85.0002 !
+ !   202.7558 !    84.9999 !
+ !------------+------------!
+ !   202.9826 !    85.0001 !
+ !   203.2094 !    85.0000 !
+ !   203.4362 !    85.0000 !
+ !   203.6630 !    85.0001 !
+ !   203.8898 !    84.9999 !
+ !------------+------------!
+ !   204.1166 !    85.0000 !
+ !   204.3434 !    85.0000 !
+ !   204.5702 !    85.0000 !
+ !   204.7970 !    85.0000 !
+ !   205.0238 !    84.9999 !
+ !------------+------------!
+ !   205.2505 !    84.9999 !
+ !   205.4773 !    85.0000 !
+ !   205.7041 !    84.9999 !
+ !   205.9309 !    85.0000 !
+ !   206.1577 !    85.0001 !
+ !------------+------------!
+ !   206.3845 !    84.9999 !
+ !   206.6113 !    85.0001 !
+ !   206.8381 !    84.9999 !
+ !   207.0649 !    85.0001 !
+ !   207.2917 !    84.9999 !
+ ---------------------------
+
+  e ERRORS OCCURRED FOR VALUES IN THIS ROW.
+       SEE THE HISTORY FILE FOR DETAILS.
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 12      
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1 (CONTINUED)                 
+
+ ---------------------------
+ !  VARY   1  !  PRODTEMP  !
+ !  S2        !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !  F         !
+ !            !            !
+ !============!============!
+ !   207.5185 !    85.0000 !
+ !   207.7453 !    84.9999 !
+ !   207.9721 !    84.9999 !
+ !   208.1989 !    85.0001 !
+ !   208.4257 !    84.9999 !
+ !------------+------------!
+ !   208.6525 !    85.0000 !
+ !   208.8793 !    85.0001 !
+ !   209.1061 !    84.9999 !
+ !   209.3329 !    84.9999 !
+ !   209.5597 !    84.9999 !
+ !------------+------------!
+ !   209.7865 !    85.0001 !
+ !   210.0133 !    84.9999 !
+ !   210.2401 !    85.0000 !
+ !   210.4669 !    85.0001 !
+ !   210.6937 !    85.0000 !
+ !------------+------------!
+ !   210.9205 !    84.9999 !
+ !   211.1472 !    84.9999 !
+ !   211.3740 !    85.0001 !
+ !   211.6008 !    85.0001 !
+ !   211.8276 !    85.0000 !
+ !------------+------------!
+ !   212.0544 !    85.0000 !
+ !   212.2812 !    85.0000 !
+ !   212.5080 !    85.0000 !
+ !   212.7348 !    85.0000 !
+ !   212.9616 !    85.0001 !
+ !------------+------------!
+ !   213.1884 !    85.0001 !
+ !   213.4152 !    85.0001 !
+ !   213.6420 !    85.0001 !
+ !   213.8688 !    85.0001 !
+ !   214.0956 !    85.0001 !
+ !------------+------------!
+ !   214.3224 !    85.0001 !
+ !   214.5492 !    85.0001 !
+ !   214.7760 !    85.0001 !
+ !   215.0028 !    85.0001 !
+ !   215.2296 !    85.0001 !
+ ---------------------------
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 13      
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1 (CONTINUED)                 
+
+ ---------------------------
+ !  VARY   1  !  PRODTEMP  !
+ !  S2        !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !  F         !
+ !            !            !
+ !============!============!
+ !   215.4564 !    85.0001 !
+ !   215.6832 !    85.0001 !
+ !   215.9100 !    85.0001 !
+ !   216.1368 !    85.0001 !
+ !   216.3636 !    85.0001 !
+ !------------+------------!
+ !   216.5904 !    85.0001 !
+ !   216.8172 !    85.0001 !
+ !   217.0439 !    85.0001 !
+ !   217.2707 !    85.0001 !
+ !   217.4975 !    85.0001 !
+ !------------+------------!
+ !   217.7243 !    85.0001 !
+ !   217.9511 !    85.0001 !
+ !   218.1779 !    85.0001 !
+ !   218.4047 !    85.0001 !
+ !   218.6315 !    85.0001 !
+ !------------+------------!
+ !   218.8583 !    85.0001 !
+ !   219.0851 !    85.0000 !
+ !   219.3119 !    85.0001 !
+ !   219.5387 !    85.0000 !
+ !   219.7655 !    85.0000 !
+ !------------+------------!
+ !   219.9923 !    85.0000 !
+ !   220.2191 !    85.0000 !
+ !   220.4459 !    85.0001 !
+ !   220.6727 !    85.0001 !
+ !   220.8995 !    85.0001 !
+ !------------+------------!
+ !   221.1263 !    85.0001 !
+ !   221.3531 !    85.0001 !
+ !   221.5799 !    85.0001 !
+ !   221.8067 !    85.0001 !
+ !   222.0335 !    84.9999 !
+ !------------+------------!
+ !   222.2603 !    84.9999 !
+ !   222.4871 !    85.0001 !
+ !   222.7139 !    85.0001 !
+ !   222.9406 !    85.0000 !
+ !   223.1674 !    85.0001 !
+ ---------------------------
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 14      
+                                                                                
+                           SENSITIVITY BLOCK SECTION                            
+
+ SENSITIVITY BLOCK:  S-1 (CONTINUED)                 
+
+ ---------------------------
+ !  VARY   1  !  PRODTEMP  !
+ !  S2        !            !
+ !  MIXED     !            !
+ !  TOTAL MO  !            !
+ !  LEFLOW    !            !
+ !  KMOL/HR   !  F         !
+ !            !            !
+ !============!============!
+ !   223.3942 !    84.9999 !
+ !   223.6210 !    85.0001 !
+ !   223.8478 !    85.0000 !
+ !   224.0746 !    85.0000 !
+ !   224.3014 !    85.0001 !
+ !------------+------------!
+ !   224.5282 !    85.0001 !
+ !   224.7550 !    84.9999 !
+ !   224.9818 !    85.0000 !
+ !   225.2086 !    85.0001 !
+ !   225.4354 !    84.9999 !
+ !------------+------------!
+ !   225.6622 !    85.0000 !
+ !   225.8890 !    85.0000 !
+ !   226.1158 !    84.9999 !
+ !   226.3426 !    85.0000 !
+ !   226.5694 !    85.0001 !
+ !------------+------------!
+ !   226.7962 !    85.0000 !
+ !   203.8108 !    85.0000 !
+ ---------------------------
+
+   VALUES OF ACCESSED FORTRAN VARIABLES ON MOST RECENT SIMULATION PASS:
+     VARIABLE          VALUE         UNITS
+     --------          -----         -----
+     PRODTEMP         85.0000        F               
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 15      
+                                                                                
+                          PHYSICAL PROPERTIES SECTION                           
+
+ COMPONENTS                              
+ ----------
+
+  ID       TYPE  ALIAS          NAME
+   TOLUENE  C     C7H8           TOLUENE                         
+   ETHYLENE C     C2H4           ETHYLENE                        
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 16      
+                                                                                
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  B1       MODEL: MIXER           
+ -----------------------------
+   INLET STREAMS:         S1          S2      
+   OUTLET STREAM:         PROD    
+   PROPERTY OPTION SET:   CHAO-SEA  SCATCHARD-HILDEBRAND / REDLICH-KWONG        
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            657.403         657.403         0.00000    
+       MASS(KG/HR   )            47511.9         47511.9        0.153140E-15
+       ENTHALPY(CAL/SEC )       0.112053E+07    0.112053E+07    0.207787E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE      FLASH
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   OUTLET PRESSURE:  MINIMUM OF INLET STREAM PRESSURES
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 17      
+                                                                                
+                                 STREAM SECTION                                 
+
+ PROD S1 S2                                      
+ ----------
+
+ STREAM ID               PROD       S1         S2      
+ FROM :                  B1         ----       ----    
+ TO   :                  ----       B1         B1      
+
+ SUBSTREAM: MIXED   
+ PHASE:                  MIXED      LIQUID     VAPOR  
+ COMPONENTS: KMOL/HR         
+   TOLUENE              453.5924   453.5924     0.0   
+   ETHYLENE             203.8108     0.0      203.8108
+ TOTAL FLOW:         
+   KMOL/HR              657.4032   453.5924   203.8108
+   KG/HR               4.7512+04  4.1794+04  5717.6596
+   L/MIN               8.8133+04   816.7157  7.8384+04
+ STATE VARIABLES:    
+   TEMP   C              29.4444    37.7778    10.0000
+   PRES   BAR             1.0133     1.0133     1.0133
+   VFRAC                  0.3233     0.0        1.0000
+   LFRAC                  0.6767     1.0000     0.0   
+   SFRAC                  0.0        0.0        0.0   
+ ENTHALPY:           
+   CAL/MOL             6136.1135  3331.2910  1.2378+04
+   CAL/GM                84.9030    36.1545   441.2386
+   CAL/SEC             1.1205+06  4.1974+05  7.0079+05
+ ENTROPY:            
+   CAL/MOL-K            -60.8567   -82.2157   -13.3075
+   CAL/GM-K              -0.8421    -0.8923    -0.4744
+ DENSITY:            
+   MOL/CC              1.2432-04  9.2564-03  4.3336-05
+   GM/CC               8.9849-03     0.8529  1.2157-03
+ AVG MW                  72.2721    92.1405    28.0538
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/22/2021  PAGE 18      
+                                                                                
+                             PROBLEM STATUS SECTION                             
+
+ BLOCK STATUS                            
+ ------------
+
+ ****************************************************************************
+ *                                                                          *
+ * Calculations were completed with warnings                                *
+ *                                                                          *
+ * All Unit Operation blocks were completed normally                        *
+ *                                                                          *
+ * All streams were flashed normally                                        *
+ *                                                                          *
+ * All Convergence blocks were completed normally                           *
+ *                                                                          *
+ * The following Sensitivity blocks were                                    *
+ * completed with warnings:                                                 *
+ *   S-1                                                                    *
+ *                                                                          *
+ ****************************************************************************
