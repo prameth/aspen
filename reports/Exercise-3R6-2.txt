@@ -1,0 +1,67 @@
+
+ BLOCK:  B1       MODEL: RCSTR           
+ -----------------------------
+   INLET STREAM:          FEED    
+   OUTLET STREAM:         PROD    
+   PROPERTY OPTION SET:   CHAO-SEA  SCATCHARD-HILDEBRAND / REDLICH-KWONG        
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(KMOL/HR )         516.594       982.276       465.683      0.115738E-15
+   MASS(KG/HR   )         15533.8       15533.8                     0.00000    
+   ENTHALPY(CAL/SEC )    -10944.5      0.442890E+07                -1.00247    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+
+    REACTOR TYPE: TEMP SPEC VAPOR   PHASE REACTOR
+
+    REACTOR VOLUME                     L                          3000.0    
+    REACTOR TEMPERATURE                C                          876.85    
+    REACTOR PRESSURE                   BAR                        5.0663    
+
+    REACTION PARAGRAPH            ID:  R-1            TYPE:  POWERLAW
+    GLOBAL BASES:
+    KBASIS                                                   MOLE-GAMMA  
+    CBASIS                                                   MOLARITY    
+    SBASIS                                                   GLOBAL  
+
+    STOICHIOMETRY:         
+
+    REACTION NUMBER:          1
+      SUBSTREAM:  MIXED   
+        ETHANE     -1.0000      ETHYLENE    1.0000      H2          1.0000    
+
+    REAC-DATA ENTRIES:
+
+      REACTION NO    TYPE     PHASE        DELT             BASIS
+                                              C   
+
+          1        KINETIC      V        0.0000           MOLARITY    
+
+
+    RATE PARAMETERS:
+
+      REACTION NO   PREEXP. FACTOR   ACT. ENERGY   TEMP. EXPONENT   REF. TEMP
+                                       CAL/MOL                      C       
+
+          1           0.72000E-01      82000.         0.0000         726.85    
+
+    POWERLAW EXPONENTS:    
+
+    REACTION NUMBER:          1
+      SUBSTREAM:  MIXED   
+        ETHANE      1.0000    
+
+                           ***  RESULTS  ***
+
+    REACTOR HEAT DUTY                  CAL/SEC                   0.44398E+07
+    RESIDENCE TIME                     HR                        0.16164E-03
+

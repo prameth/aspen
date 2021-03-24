@@ -1,0 +1,64 @@
+
+ BLOCK:  B1       MODEL: RSTOIC          
+ ------------------------------
+   INLET STREAMS:         CO          H       
+   OUTLET STREAM:         CH3OH   
+   PROPERTY OPTION SET:   IDEAL     IDEAL LIQUID / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(KMOL/HR )         3.00000       1.00000      -2.00000     -0.148030E-15
+   MASS(KG/HR   )         32.0422       32.0422                   -0.221752E-15
+   ENTHALPY(CAL/SEC )    -7333.23      -13331.6                    0.449935    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   STOICHIOMETRY MATRIX:
+
+    REACTION #   1:
+     SUBSTREAM MIXED   :
+     CARBO-01  -1.00    H2        -2.00    METHANOL   1.00    
+
+
+   REACTION CONVERSION SPECS: NUMBER=    1
+     REACTION #   1:
+     SUBSTREAM:MIXED    KEY COMP:CARBO-01 CONV FRAC:  1.000    
+
+
+
+
+   ONE    PHASE  TP  FLASH   SPECIFIED PHASE IS  VAPOR  
+   SPECIFIED TEMPERATURE C                                  25.0000     
+   SPECIFIED PRESSURE    BAR                                 1.01325    
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   SIMULTANEOUS REACTIONS
+   GENERATE COMBUSTION REACTIONS FOR FEED SPECIES          NO  
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    25.000    
+   OUTLET PRESSURE       BAR                                  1.0132    
+   HEAT DUTY             CAL/SEC                             -5998.3    
+
+
+
+   CALCULATED HEATS OF REACTION:
+
+     REACTION          REFERENCE          HEAT OF 
+     NUMBER            COMPONENT          REACTION
+                                           CAL/MOL         
+      1                   H2                -10797.    
+
+   REACTION EXTENTS:
+
+      REACTION          REACTION
+      NUMBER            EXTENT  
+                        KMOL/HR         
+      1                  1.0000    

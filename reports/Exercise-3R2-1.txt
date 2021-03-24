@@ -1,0 +1,64 @@
+
+ BLOCK:  B1       MODEL: RSTOIC          
+ ------------------------------
+   INLET STREAMS:         CO          H2      
+   OUTLET STREAM:         CH3OH   
+   PROPERTY OPTION SET:   CHAO-SEA  SCATCHARD-HILDEBRAND / REDLICH-KWONG        
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(KMOL/HR )         3.00000       1.40000      -1.60000     -0.740149E-16
+   MASS(KG/HR   )         32.0422       32.0422                   -0.221752E-15
+   ENTHALPY(CAL/SEC )    -7333.66      -7333.66                    0.124017E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   STOICHIOMETRY MATRIX:
+
+    REACTION #   1:
+     SUBSTREAM MIXED   :
+     CO        -1.00    H2        -2.00    CH3OH      1.00    
+
+
+   REACTION CONVERSION SPECS: NUMBER=    1
+     REACTION #   1:
+     SUBSTREAM:MIXED    KEY COMP:CO       CONV FRAC: 0.8000    
+
+
+
+
+   TWO    PHASE  PQ  FLASH
+   SPECIFIED PRESSURE    BAR                                 1.01325    
+   SPECIFIED HEAT DUTY   CAL/SEC                             0.0        
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   SIMULTANEOUS REACTIONS
+   GENERATE COMBUSTION REACTIONS FOR FEED SPECIES          NO  
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    949.02    
+   OUTLET PRESSURE       BAR                                  1.0132    
+   VAPOR FRACTION                                             1.0000    
+
+
+
+   REACTION EXTENTS:
+
+      REACTION          REACTION
+      NUMBER            EXTENT  
+                        KMOL/HR         
+      1                 0.80000    
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      CO               0.14286        0.54424E-07    0.14286         18.875    
+      H2               0.28571        0.35900E-07    0.28571         110.09    
+      CH3OH            0.57143         1.0000        0.57143         7683.8    

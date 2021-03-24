@@ -1,0 +1,354 @@
+
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION REPORT                      + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       MARCH 24, 2021      
+ VERSION: 37.0   Build 395                               WEDNESDAY   
+ INSTALLATION:                                           11:58:05 A.M.       
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/24/2021  PAGE    I
+                                                                                
+
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+                               TABLE OF CONTENTS                                
+
+
+            RUN CONTROL SECTION....................................  1
+                 RUN CONTROL INFORMATION...........................  1
+
+            FLOWSHEET SECTION......................................  2
+                 FLOWSHEET CONNECTIVITY BY STREAMS.................  2
+                 FLOWSHEET CONNECTIVITY BY BLOCKS..................  2
+                 COMPUTATIONAL SEQUENCE............................  2
+                 OVERALL FLOWSHEET BALANCE.........................  2
+
+            PHYSICAL PROPERTIES SECTION............................  3
+                 COMPONENTS........................................  3
+
+            U-O-S BLOCK SECTION....................................  4
+                 BLOCK:  B3       MODEL: DUPL......................  4
+                 BLOCK:  RBIBBS   MODEL: RGIBBS....................  4
+                 BLOCK:  REQUIL   MODEL: REQUIL....................  5
+
+            STREAM SECTION.........................................  7
+                 S1 S2 S3 S4 S5....................................  7
+                 S6................................................  8
+
+            PROBLEM STATUS SECTION.................................  9
+                 BLOCK STATUS......................................  9
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/24/2021  PAGE 1       
+                                                                                
+                              RUN CONTROL SECTION                               
+
+ RUN CONTROL INFORMATION                 
+ -----------------------
+
+ THIS COPY OF ASPEN PLUS LICENSED TO                                 
+
+ TYPE OF RUN: NEW 
+
+ INPUT FILE NAME: _4819cdn.inm
+
+ OUTPUT PROBLEM DATA FILE NAME: _4819cdn 
+ LOCATED IN:                    
+
+
+ PDF SIZE USED FOR INPUT TRANSLATION:
+   NUMBER OF FILE RECORDS (PSIZE) =     0
+   NUMBER OF IN-CORE RECORDS      =   256
+ PSIZE NEEDED FOR SIMULATION    =   256
+
+ CALLING PROGRAM NAME:          apmain  
+ LOCATED IN: C:\Program Files\AspenTech\Aspen Plus V11.0\Engine\\xeq
+
+ SIMULATION REQUESTED FOR ENTIRE FLOWSHEET
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/24/2021  PAGE 2       
+                                                                                
+                               FLOWSHEET SECTION                                
+
+ FLOWSHEET CONNECTIVITY BY STREAMS       
+ ---------------------------------
+
+   STREAM     SOURCE     DEST           STREAM     SOURCE     DEST
+   S1         ----       B3             S4         REQUIL     ----    
+   S5         REQUIL     ----           S6         RBIBBS     ----    
+   S2         B3         REQUIL         S3         B3         RBIBBS  
+
+ FLOWSHEET CONNECTIVITY BY BLOCKS        
+ --------------------------------
+
+   BLOCK        INLETS                         OUTLETS
+   REQUIL       S2                             S4 S5                       
+   RBIBBS       S3                             S6                          
+   B3           S1                             S2 S3                       
+
+ COMPUTATIONAL SEQUENCE                  
+ ----------------------
+
+ SEQUENCE USED WAS:
+    B3 REQUIL RBIBBS                                                       
+
+ OVERALL FLOWSHEET BALANCE               
+ -------------------------
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   CONVENTIONAL COMPONENTS  
+           (KMOL/HR )
+      PROPANE             1.00000      0.983016      -1.01698      -1.00000    
+      ETHYLENE            0.00000       1.01698       1.01698       0.00000    
+      METHANE             0.00000       1.01698       1.01698       0.00000    
+   TOTAL BALANCE
+   MOLE(KMOL/HR )         1.00000       3.01698       1.01698     -0.331457    
+   MASS(KG/HR   )         44.0965       88.1930                   -0.500000    
+   ENTHALPY(CAL/SEC )    -6953.99      -4677.98                   -0.327296    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          407.881      KG/HR           
+    NET STREAMS CO2E PRODUCTION   407.881      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         407.881      KG/HR           
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/24/2021  PAGE 3       
+                                                                                
+                          PHYSICAL PROPERTIES SECTION                           
+
+ COMPONENTS                              
+ ----------
+
+  ID       TYPE  ALIAS          NAME
+   PROPANE  C     C3H8           PROPANE                         
+   ETHYLENE C     C2H4           ETHYLENE                        
+   METHANE  C     CH4            METHANE                         
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/24/2021  PAGE 4       
+                                                                                
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  B3       MODEL: DUPL            
+ ----------------------------
+   INLET STREAM:          S1      
+   OUTLET STREAMS:        S2          S3      
+
+ BLOCK:  RBIBBS   MODEL: RGIBBS          
+ ------------------------------
+   INLET STREAM:          S3      
+   OUTLET STREAM:         S6      
+   PROPERTY OPTION SET:   CHAO-SEA  SCATCHARD-HILDEBRAND / REDLICH-KWONG        
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(KMOL/HR )         1.00000       1.50849      0.508492       0.00000    
+   MASS(KG/HR   )         44.0965       44.0965                     0.00000    
+   ENTHALPY(CAL/SEC )    -6953.99      -2338.99                   -0.663648    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          203.940      KG/HR           
+    NET STREAMS CO2E PRODUCTION   203.940      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         203.940      KG/HR           
+
+                          ***  INPUT DATA  ***
+
+   EQUILIBRIUM SPECIFICATIONS:                       
+     ONLY CHEMICAL EQUILIBRIUM IS CONSIDERED, THE FLUID PHASE IS VAPOR   
+     SYSTEM TEMPERATURE    C                                  300.00    
+     TEMPERATURE FOR FREE ENERGY EVALUATION    C              300.00    
+     SYSTEM PRESSURE       BAR                                1.0132    
+
+   FLUID PHASE SPECIES IN PRODUCT LIST:
+     PROPANE ETHYLENE METHANE    
+
+   ATOM MATRIX:   
+   ELEMENT      H    C   
+     PROPANE    8.00 3.00
+     ETHYLENE   4.00 2.00
+     METHANE    4.00 1.00
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/24/2021  PAGE 5       
+                                                                                
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  RBIBBS   MODEL: RGIBBS (CONTINUED)          
+
+                           ***  RESULTS  ***
+   TEMPERATURE           C                                    300.00    
+   PRESSURE              BAR                                  1.0132    
+   HEAT DUTY             CAL/SEC                              4615.0    
+   VAPOR FRACTION                                             1.0000    
+   NUMBER OF FLUID PHASES                                              1
+
+   FLUID PHASE MOLE FRACTIONS:   
+
+   PHASE              VAPOR   
+   OF TYPE            VAPOR   
+   PHASE FRACTION     1.000000    
+   PLACED IN STREAM   S6      
+     PROPANE         0.3258272    
+     ETHYLENE        0.3370864    
+     METHANE         0.3370864    
+
+   KMOL/HR            1.508492    
+
+ BLOCK:  REQUIL   MODEL: REQUIL          
+ ------------------------------
+   INLET STREAM:          S2      
+   OUTLET VAPOR STREAM:   S4      
+   OUTLET LIQUID STREAM:  S5      
+   PROPERTY OPTION SET:   CHAO-SEA  SCATCHARD-HILDEBRAND / REDLICH-KWONG        
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(KMOL/HR )         1.00000       1.50849      0.508492       0.00000    
+   MASS(KG/HR   )         44.0965       44.0965                   -0.467551E-10
+   ENTHALPY(CAL/SEC )    -6953.99      -2338.99                   -0.663648    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          203.940      KG/HR           
+    NET STREAMS CO2E PRODUCTION   203.940      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         203.940      KG/HR           
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/24/2021  PAGE 6       
+                                                                                
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REQUIL   MODEL: REQUIL (CONTINUED)          
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE C                                 300.000      
+   SPECIFIED PRESSURE    BAR                                 1.01325    
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   LIQUID ENTRAINMENT                                         0.0000    
+   SOLID SPLIT FRACTIONS:
+   SUBSTREAM NO. =    1   MIXED SUBSTREAM, NO SOLID SPLITS.
+
+                           ***  RESULTS  ***
+   OUTPUT TEMPERATURE    C                                    300.00    
+   OUTPUT PRESSURE       BAR                                  1.0132    
+   HEAT DUTY             CAL/SEC                              4615.0    
+   VAPOR FRACTION                                             1.0000    
+
+   REACTION EQUILIBRIUM CONSTANTS:
+
+     REACTION        EQUILIBRIUM        EQUILIBRIUM        TEMPERATURE
+      NUMBER          CONSTANT          TEMPERATURE           UNIT    
+        1            0.34923             300.00                C               
+
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/24/2021  PAGE 7       
+                                                                                
+                                 STREAM SECTION                                 
+
+ S1 S2 S3 S4 S5                                  
+ --------------
+
+ STREAM ID               S1         S2         S3         S4         S5      
+ FROM :                  ----       B3         B3         REQUIL     REQUIL  
+ TO   :                  B3         REQUIL     RBIBBS     ----       ----    
+
+ SUBSTREAM: MIXED   
+ PHASE:                  VAPOR      VAPOR      VAPOR      VAPOR      MISSING
+ COMPONENTS: KMOL/HR         
+   PROPANE                1.0000     1.0000     1.0000     0.4915     0.0   
+   ETHYLENE               0.0        0.0        0.0        0.5085     0.0   
+   METHANE                0.0        0.0        0.0        0.5085     0.0   
+ TOTAL FLOW:         
+   KMOL/HR                1.0000     1.0000     1.0000     1.5085     0.0   
+   KG/HR                 44.0965    44.0965    44.0965    44.0965     0.0   
+   L/MIN                401.5993   401.5993   401.5993  1181.6191     0.0   
+ STATE VARIABLES:    
+   TEMP   C              25.0000    25.0000    25.0000   300.0000    MISSING
+   PRES   BAR             1.0133     1.0133     1.0133     1.0133     1.0133
+   VFRAC                  1.0000     1.0000     1.0000     1.0000    MISSING
+   LFRAC                  0.0        0.0        0.0        0.0       MISSING
+   SFRAC                  0.0        0.0        0.0        0.0       MISSING
+ ENTHALPY:           
+   CAL/MOL            -2.5034+04 -2.5034+04 -2.5034+04 -5581.9714    MISSING
+   CAL/GM              -567.7172  -567.7172  -567.7172  -190.9529    MISSING
+   CAL/SEC            -6953.9868 -6953.9868 -6953.9868 -2338.9890    MISSING
+ ENTROPY:            
+   CAL/MOL-K            -64.3727   -64.3727   -64.3727   -19.5203    MISSING
+   CAL/GM-K              -1.4598    -1.4598    -1.4598    -0.6678    MISSING
+ DENSITY:            
+   MOL/CC              4.1501-05  4.1501-05  4.1501-05  2.1277-05    MISSING
+   GM/CC               1.8300-03  1.8300-03  1.8300-03  6.2198-04    MISSING
+ AVG MW                  44.0965    44.0965    44.0965    29.2322    MISSING
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/24/2021  PAGE 8       
+                                                                                
+                                 STREAM SECTION                                 
+
+ S6                                              
+ --
+
+ STREAM ID               S6      
+ FROM :                  RBIBBS  
+ TO   :                  ----    
+
+ SUBSTREAM: MIXED   
+ PHASE:                  VAPOR  
+ COMPONENTS: KMOL/HR         
+   PROPANE                0.4915
+   ETHYLENE               0.5085
+   METHANE                0.5085
+ TOTAL FLOW:         
+   KMOL/HR                1.5085
+   KG/HR                 44.0965
+   L/MIN               1181.6191
+ STATE VARIABLES:    
+   TEMP   C             300.0000
+   PRES   BAR             1.0133
+   VFRAC                  1.0000
+   LFRAC                  0.0   
+   SFRAC                  0.0   
+ ENTHALPY:           
+   CAL/MOL            -5581.9714
+   CAL/GM              -190.9529
+   CAL/SEC            -2338.9890
+ ENTROPY:            
+   CAL/MOL-K            -19.5203
+   CAL/GM-K              -0.6678
+ DENSITY:            
+   MOL/CC              2.1277-05
+   GM/CC               6.2198-04
+ AVG MW                  29.2322
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   03/24/2021  PAGE 9       
+                                                                                
+                             PROBLEM STATUS SECTION                             
+
+ BLOCK STATUS                            
+ ------------
+
+ ****************************************************************************
+ *                                                                          *
+ * Calculations were completed normally                                     *
+ *                                                                          *
+ * All Unit Operation blocks were completed normally                        *
+ *                                                                          *
+ * All streams were flashed normally                                        *
+ *                                                                          *
+ ****************************************************************************
