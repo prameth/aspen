@@ -1,0 +1,530 @@
+
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION REPORT                      + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       APRIL 13, 2021      
+ VERSION: 37.0   Build 395                               TUESDAY     
+ INSTALLATION:                                           2:30:08 P.M.        
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE    I
+                                                                                
+
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+                               TABLE OF CONTENTS                                
+
+
+            RUN CONTROL SECTION....................................  1
+                 RUN CONTROL INFORMATION...........................  1
+
+            FLOWSHEET SECTION......................................  2
+                 FLOWSHEET CONNECTIVITY BY STREAMS.................  2
+                 FLOWSHEET CONNECTIVITY BY BLOCKS..................  2
+                 CONVERGENCE STATUS SUMMARY........................  2
+                 CONVERGENCE BLOCK:  $OLVER01......................  2
+                 COMPUTATIONAL SEQUENCE............................  3
+                 OVERALL FLOWSHEET BALANCE.........................  3
+
+            PHYSICAL PROPERTIES SECTION............................  5
+                 COMPONENTS........................................  5
+
+            U-O-S BLOCK SECTION....................................  6
+                 BLOCK:  B1       MODEL: MIXER.....................  6
+                 BLOCK:  B2       MODEL: RSTOIC....................  6
+                 BLOCK:  B3       MODEL: SEP.......................  8
+                 BLOCK:  B4       MODEL: FSPLIT....................  9
+
+            STREAM SECTION......................................... 11
+                 1 2 3 FEED PRODUCT................................ 11
+                 PURGE RECY........................................ 12
+
+            PROBLEM STATUS SECTION................................. 13
+                 BLOCK STATUS...................................... 13
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 1       
+                                                                                
+                              RUN CONTROL SECTION                               
+
+ RUN CONTROL INFORMATION                 
+ -----------------------
+
+ THIS COPY OF ASPEN PLUS LICENSED TO                                 
+
+ TYPE OF RUN: NEW 
+
+ INPUT FILE NAME: _3817gfw.inm
+
+ OUTPUT PROBLEM DATA FILE NAME: _3817gfw 
+ LOCATED IN:                    
+
+
+ PDF SIZE USED FOR INPUT TRANSLATION:
+   NUMBER OF FILE RECORDS (PSIZE) =     0
+   NUMBER OF IN-CORE RECORDS      =   256
+ PSIZE NEEDED FOR SIMULATION    =   256
+
+ CALLING PROGRAM NAME:          apmain  
+ LOCATED IN: C:\Program Files\AspenTech\Aspen Plus V11.0\Engine\\xeq
+
+ SIMULATION REQUESTED FOR ENTIRE FLOWSHEET
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 2       
+                                                                                
+                               FLOWSHEET SECTION                                
+
+ FLOWSHEET CONNECTIVITY BY STREAMS       
+ ---------------------------------
+
+   STREAM     SOURCE     DEST           STREAM     SOURCE     DEST
+   FEED       ----       B1             2          B1         B2      
+   3          B2         B3             PRODUCT    B3         ----    
+   1          B3         B4             PURGE      B4         ----    
+   RECY       B4         B1                                           
+
+ FLOWSHEET CONNECTIVITY BY BLOCKS        
+ --------------------------------
+
+   BLOCK        INLETS                         OUTLETS
+   B1           FEED RECY                      2                           
+   B2           2                              3                           
+   B3           3                              PRODUCT 1                   
+   B4           1                              PURGE RECY                  
+
+ CONVERGENCE STATUS SUMMARY              
+ --------------------------
+
+   TEAR STREAM SUMMARY
+   ===================
+
+
+   STREAM    VARIABLE         MAXIMUM      MAX. ERR.    ABSOLUTE          CONV
+   ID        ID               ERR/TOL      RELATIVE     ERROR       STAT  BLOCK
+   ------    --------         --------     -------      ---------   ----  -----
+   RECY     ARGON MOLEFLOW    0.77469      0.77469E-04  0.11022E-09  #    $OLVER01                                                                                 
+
+   #  = CONVERGED
+   *  = NOT CONVERGED
+
+ CONVERGENCE BLOCK:  $OLVER01            
+ ----------------------------
+     Tear Stream  :  RECY
+     Tolerance used:  0.100D-03 
+     Trace molefrac:  0.100D-05 
+ 
+     MAXIT=   30 WAIT   1 ITERATIONS BEFORE ACCELERATING
+     QMAX =   0.0     QMIN =  -5.0    
+     METHOD: WEGSTEIN      STATUS: CONVERGED       
+     TOTAL NUMBER OF ITERATIONS:    20
+
+                          *** FINAL VALUES ***
+
+     
+     VAR#  TEAR STREAM VAR   STREAM    SUBSTREA COMPONEN UNIT         VALUE        PREV VALUE   ERR/TOL
+     ----  ----------------  ------    -------- -------- ----         -----        ----------   -------
+        1  TOTAL MOLEFLOW    RECY      MIXED             KMOL/HR          0.6121       0.6121    4.1294-02   
+        2  MOLE-FLOW         RECY      MIXED    NITROGEN KMOL/HR          0.1449       0.1449    1.7141-09   
+        3  MOLE-FLOW         RECY      MIXED    HYDROGEN KMOL/HR          0.4621       0.4621    4.6111-02   
+        4  MOLE-FLOW         RECY      MIXED    AMMONIA  KMOL/HR          0.0          0.0          0.0      
+        5  MOLE-FLOW         RECY      MIXED    ARGON    KMOL/HR       5.1225-03    5.1221-03       0.7747   
+        6  PRESSURE          RECY      MIXED             BAR              1.0000       1.0000       0.0      
+        7  MASS ENTHALPY     RECY      MIXED             CAL/GM          20.2999      20.2998    1.2292-02   
+
+                          *** ITERATION HISTORY *** 
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 3       
+                                                                                
+                               FLOWSHEET SECTION                                
+
+ CONVERGENCE BLOCK:  $OLVER01 (CONTINUED)            
+
+     TEAR STREAMS AND TEAR VARIABLES: 
+
+     ITERATION MAX-ERR/TOL  VAR# STREAM ID VAR DESCRIPTION  SUBSTREA COMPONEN ATTRIBUT ELEMENT
+     --------- -----------  ---- --------- ---------------  -------- -------- -------- -------
+          1      0.1000E+07    6 RECY      PRESSURE         MIXED                              
+          2       9500.        5 RECY      MOLE-FLO         MIXED    ARGON                     
+          3       992.5        5 RECY      MOLE-FLO         MIXED    ARGON                     
+          4       435.5        5 RECY      MOLE-FLO         MIXED    ARGON                     
+          5       241.7        5 RECY      MOLE-FLO         MIXED    ARGON                     
+          6       147.7        5 RECY      MOLE-FLO         MIXED    ARGON                     
+          7       95.00        5 RECY      MOLE-FLO         MIXED    ARGON                     
+          8       62.92        5 RECY      MOLE-FLO         MIXED    ARGON                     
+          9       42.44        5 RECY      MOLE-FLO         MIXED    ARGON                     
+         10       28.97        5 RECY      MOLE-FLO         MIXED    ARGON                     
+         11       19.93        5 RECY      MOLE-FLO         MIXED    ARGON                     
+         12       13.79        5 RECY      MOLE-FLO         MIXED    ARGON                     
+         13       9.572        5 RECY      MOLE-FLO         MIXED    ARGON                     
+         14       6.662        5 RECY      MOLE-FLO         MIXED    ARGON                     
+         15       4.645        5 RECY      MOLE-FLO         MIXED    ARGON                     
+         16       3.242        5 RECY      MOLE-FLO         MIXED    ARGON                     
+         17       2.265        5 RECY      MOLE-FLO         MIXED    ARGON                     
+         18       1.584        5 RECY      MOLE-FLO         MIXED    ARGON                     
+         19       1.107        5 RECY      MOLE-FLO         MIXED    ARGON                     
+         20      0.7747        5 RECY      MOLE-FLO         MIXED    ARGON                     
+
+ COMPUTATIONAL SEQUENCE                  
+ ----------------------
+
+ SEQUENCE USED WAS:
+    $OLVER01 B1 B2 B3 B4                                                   
+    (RETURN $OLVER01)                                                      
+
+ OVERALL FLOWSHEET BALANCE               
+ -------------------------
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   CONVENTIONAL COMPONENTS  
+           (KMOL/HR )
+      NITROGEN           0.245700E-01  0.762517E-02 -0.169448E-01  0.101210E-11
+      HYDROGEN           0.751600E-01  0.243234E-01 -0.508345E-01  0.283526E-04
+      AMMONIA             0.00000      0.338897E-01  0.338897E-01   0.00000    
+      ARGON              0.270000E-03  0.269603E-03   0.00000      0.146964E-02
+   TOTAL BALANCE
+   MOLE(KMOL/HR )        0.100000      0.661078E-01 -0.338897E-01  0.252779E-04
+   MASS(KG/HR   )        0.850591      0.850571                    0.236863E-04
+   ENTHALPY(CAL/SEC )     4.79326      -99.6385                     1.04811    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 4       
+                                                                                
+                               FLOWSHEET SECTION                                
+
+ OVERALL FLOWSHEET BALANCE (CONTINUED)               
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 5       
+                                                                                
+                          PHYSICAL PROPERTIES SECTION                           
+
+ COMPONENTS                              
+ ----------
+
+  ID       TYPE  ALIAS          NAME
+   NITROGEN C     N2             NITROGEN                        
+   HYDROGEN C     H2             HYDROGEN                        
+   AMMONIA  C     H3N            AMMONIA                         
+   ARGON    C     AR             ARGON                           
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 6       
+                                                                                
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  B1       MODEL: MIXER           
+ -----------------------------
+   INLET STREAMS:         FEED        RECY    
+   OUTLET STREAM:         2       
+   PROPERTY OPTION SET:   IDEAL     IDEAL LIQUID / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )           0.712143        0.712143         0.00000    
+       MASS(KG/HR   )            6.04537         6.04537        0.293837E-15
+       ENTHALPY(CAL/SEC )        34.0858         34.0858        0.208457E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE      FLASH
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   OUTLET PRESSURE:  MINIMUM OF INLET STREAM PRESSURES
+
+ BLOCK:  B2       MODEL: RSTOIC          
+ ------------------------------
+   INLET STREAM:          2       
+   OUTLET STREAM:         3       
+   PROPERTY OPTION SET:   IDEAL     IDEAL LIQUID / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(KMOL/HR )        0.712143      0.678253     -0.338897E-01   0.00000    
+   MASS(KG/HR   )         6.04537       6.04537                    0.146919E-15
+   ENTHALPY(CAL/SEC )     34.0858      -70.3458                     1.48455    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 7       
+                                                                                
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  B2       MODEL: RSTOIC (CONTINUED)          
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   STOICHIOMETRY MATRIX:
+
+    REACTION #   1:
+     SUBSTREAM MIXED   :
+     NITROGEN  -1.00    HYDROGEN  -3.00    AMMONIA    2.00    
+
+
+   REACTION CONVERSION SPECS: NUMBER=    1
+     REACTION #   1:
+     SUBSTREAM:MIXED    KEY COMP:NITROGEN CONV FRAC: 0.1000    
+
+
+
+
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE C                                  50.0000     
+   SPECIFIED PRESSURE    BAR                                 1.00000    
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   SIMULTANEOUS REACTIONS
+   GENERATE COMBUSTION REACTIONS FOR FEED SPECIES          NO  
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    50.000    
+   OUTLET PRESSURE       BAR                                  1.0000    
+   HEAT DUTY             CAL/SEC                             -104.43    
+   VAPOR FRACTION                                             1.0000    
+
+
+
+   REACTION EXTENTS:
+
+      REACTION          REACTION
+      NUMBER            EXTENT  
+                        KMOL/HR         
+      1                 0.16945E-01
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      NITROGEN         0.22485        0.69421E-01    0.22485         1194.9    
+      HYDROGEN         0.71724        0.18343E-01    0.71724         14425.    
+      AMMONIA          0.49966E-01    0.90938        0.49966E-01     20.270    
+      ARGON            0.79499E-02    0.28539E-02    0.79499E-02     1027.7    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 8       
+                                                                                
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  B3       MODEL: SEP             
+ ---------------------------
+   INLET STREAM:          3       
+   OUTLET STREAMS:        PRODUCT     1       
+   PROPERTY OPTION SET:   IDEAL     IDEAL LIQUID / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )           0.678253        0.678253       -0.163689E-15
+       MASS(KG/HR   )            6.04537         6.04537       -0.146919E-15
+       ENTHALPY(CAL/SEC )       -70.3458        -70.3458        0.202014E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+
+                          ***  INPUT DATA  ***
+
+   FLASH SPECS FOR STREAM PRODUCT 
+   TWO    PHASE  TP  FLASH
+   PRESSURE DROP         BAR                                 0.0        
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FLASH SPECS FOR STREAM 1       
+   TWO    PHASE  TP  FLASH
+   PRESSURE DROP         BAR                                 0.0        
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FRACTION OF FEED
+     SUBSTREAM= MIXED   
+       STREAM= PRODUCT   CPT= NITROGEN  FRACTION=          0.0        
+                              HYDROGEN                     0.0        
+                              AMMONIA                      1.00000    
+                              ARGON                        0.0        
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 9       
+                                                                                
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  B3       MODEL: SEP (CONTINUED)             
+
+
+                           ***  RESULTS  ***
+
+   HEAT DUTY             CAL/SEC                            -0.13577E-13
+
+  COMPONENT = NITROGEN
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    1          MIXED                 1.00000    
+
+  COMPONENT = HYDROGEN
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    1          MIXED                 1.00000    
+
+  COMPONENT = AMMONIA 
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    PRODUCT    MIXED                 1.00000    
+
+  COMPONENT = ARGON   
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    1          MIXED                 1.00000    
+
+ BLOCK:  B4       MODEL: FSPLIT          
+ ------------------------------
+   INLET STREAM:          1       
+   OUTLET STREAMS:        PURGE       RECY    
+   PROPERTY OPTION SET:   IDEAL     IDEAL LIQUID / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )           0.644363        0.644361        0.392292E-05
+       MASS(KG/HR   )            5.46822         5.46819        0.368444E-05
+       ENTHALPY(CAL/SEC )        30.8344         30.8343        0.485220E-05
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+
+  FRACTION OF FLOW                 STRM=PURGE    FRAC=         0.050000   
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 10      
+                                                                                
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  B4       MODEL: FSPLIT (CONTINUED)          
+
+                           ***  RESULTS  ***
+
+  STREAM= PURGE          SPLIT=          0.050000    KEY=  0    STREAM-ORDER=   1
+          RECY                           0.95000           0                    2
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 11      
+                                                                                
+                                 STREAM SECTION                                 
+
+ 1 2 3 FEED PRODUCT                              
+ ------------------
+
+ STREAM ID               1          2          3          FEED       PRODUCT 
+ FROM :                  B3         B1         B2         ----       B3      
+ TO   :                  B4         B2         B3         B1         ----    
+
+ SUBSTREAM: MIXED   
+ PHASE:                  VAPOR      VAPOR      VAPOR      VAPOR      VAPOR  
+ COMPONENTS: KMOL/HR         
+   NITROGEN               0.1525     0.1694     0.1525  2.4570-02     0.0   
+   HYDROGEN               0.4865     0.5373     0.4865  7.5160-02     0.0   
+   AMMONIA                0.0        0.0     3.3890-02     0.0     3.3890-02
+   ARGON               5.3921-03  5.3921-03  5.3921-03  2.7000-04     0.0   
+ TOTAL FLOW:         
+   KMOL/HR                0.6444     0.7121     0.6783     0.1000  3.3890-02
+   KG/HR                  5.4682     6.0454     6.0454     0.8506     0.5772
+   L/MIN                288.5433   318.8945   303.7189    44.7796    15.1757
+ STATE VARIABLES:    
+   TEMP   C              50.0000    50.0000    50.0000    50.0000    50.0000
+   PRES   BAR             1.0000     1.0000     1.0000     1.0000     1.0000
+   VFRAC                  1.0000     1.0000     1.0000     1.0000     1.0000
+   LFRAC                  0.0        0.0        0.0        0.0        0.0   
+   SFRAC                  0.0        0.0        0.0        0.0        0.0   
+ ENTHALPY:           
+   CAL/MOL              172.2693   172.3096  -373.3782   172.5575 -1.0748+04
+   CAL/GM                20.2999    20.2980   -41.8907    20.2868  -631.1056
+   CAL/SEC               30.8344    34.0858   -70.3458     4.7933  -101.1802
+ ENTROPY:            
+   CAL/MOL-K              1.7592     1.7550     0.9204     1.7247   -22.9138
+   CAL/GM-K               0.2073     0.2067     0.1033     0.2028    -1.3455
+ DENSITY:            
+   MOL/CC              3.7219-05  3.7219-05  3.7219-05  3.7219-05  3.7219-05
+   GM/CC               3.1585-04  3.1595-04  3.3174-04  3.1658-04  6.3387-04
+ AVG MW                   8.4862     8.4890     8.9132     8.5059    17.0306
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 12      
+                                                                                
+                                 STREAM SECTION                                 
+
+ PURGE RECY                                      
+ ----------
+
+ STREAM ID               PURGE      RECY    
+ FROM :                  B4         B4      
+ TO   :                  ----       B1      
+
+
+ CONV. MAX. REL. ERR:     0.0     7.7469-05
+ SUBSTREAM: MIXED   
+ PHASE:                  VAPOR      VAPOR  
+ COMPONENTS: KMOL/HR         
+   NITROGEN            7.6252-03     0.1449
+   HYDROGEN            2.4323-02     0.4621
+   AMMONIA                0.0        0.0   
+   ARGON               2.6960-04  5.1221-03
+ TOTAL FLOW:         
+   KMOL/HR             3.2218-02     0.6121
+   KG/HR                  0.2734     5.1948
+   L/MIN                 14.4272   274.1150
+ STATE VARIABLES:    
+   TEMP   C              50.0000    50.0000
+   PRES   BAR             1.0000     1.0000
+   VFRAC                  1.0000     1.0000
+   LFRAC                  0.0        0.0   
+   SFRAC                  0.0        0.0   
+ ENTHALPY:           
+   CAL/MOL              172.2693   172.2691
+   CAL/GM                20.2999    20.2998
+   CAL/SEC                1.5417    29.2926
+ ENTROPY:            
+   CAL/MOL-K              1.7592     1.7592
+   CAL/GM-K               0.2073     0.2073
+ DENSITY:            
+   MOL/CC              3.7219-05  3.7219-05
+   GM/CC               3.1585-04  3.1585-04
+ AVG MW                   8.4862     8.4862
+ ASPEN PLUS   PLAT: WIN-X64   VER: 37.0                   04/13/2021  PAGE 13      
+                                                                                
+                             PROBLEM STATUS SECTION                             
+
+ BLOCK STATUS                            
+ ------------
+
+ ****************************************************************************
+ *                                                                          *
+ * Calculations were completed normally                                     *
+ *                                                                          *
+ * All Unit Operation blocks were completed normally                        *
+ *                                                                          *
+ * All streams were flashed normally                                        *
+ *                                                                          *
+ * All Convergence blocks were completed normally                           *
+ *                                                                          *
+ ****************************************************************************
